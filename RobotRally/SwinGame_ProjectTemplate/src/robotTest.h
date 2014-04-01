@@ -11,22 +11,29 @@
 
 #include <iostream>
 #include "Robot.h"
-
+#include <vector>
 
 class robotTest {
     
 private:
-    robot *testRobot;
+    std::vector<robot *> _Robots;
+    
+    robot *underTestRobot;
+    
+    
     
     void buildStdRobot();
     void buildFacingRobot();
-
-    
+   
     //list of tests
     void testStdRobotDir();
     
 public:
-    int mainTest(int argc, const char * argv[]);
+    robotTest();
+    
+    ~robotTest();
+    
+    int battery_of_tests();
     
 };
 #endif /* defined(__RobotRally__robotTest__) */
