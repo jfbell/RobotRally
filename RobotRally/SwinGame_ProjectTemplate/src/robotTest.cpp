@@ -25,6 +25,7 @@ void robotTest::buildFacingRobot(){
     std::cout << "West robot is facing " << testRobot_W.getHeading() << std::endl;
     std::cout << "North robot is facing " << testRobot_N.getHeading() << std::endl;
     std::cout << "South robot is facing " << testRobot_S.getHeading() << std::endl;
+
 }
 
 //list of tests

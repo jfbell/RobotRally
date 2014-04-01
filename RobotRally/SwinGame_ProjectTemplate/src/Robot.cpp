@@ -20,7 +20,7 @@ robot::robot(){
  Builds  robot facing towards param face with full health
  @param face what direction to face at start
  */
-robot::robot(_direction     face){
+robot::robot(_direction face){
     health = 6;
 }
 
