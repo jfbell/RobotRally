@@ -40,13 +40,18 @@ public:
     //constructors
     robot();
     robot(_direction face);
+	
+	//destructors
+//	~robot();
     
     //public methods
     int decrementHealth(int amount);
     _direction getHeading();
     int getHealth();
     bool rotate(_rotate turn);
-    std::string toString();
+	std::string dir_to_Str(_direction d);
+	std::string toString();
+//	std::ostream& operator<<( std::ostream& aOStream, const robot& r);
 };
 
 

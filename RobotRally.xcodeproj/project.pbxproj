@@ -7,29 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A0930BC18E12BB000081E04 /* RobotRally.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A0930BB18E12BB000081E04 /* RobotRally.1 */; };
-		1A09312B18E12BF400081E04 /* Animations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930C518E12BF300081E04 /* Animations.cpp */; };
-		1A09312C18E12BF400081E04 /* Arduino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930C718E12BF300081E04 /* Arduino.cpp */; };
-		1A09312D18E12BF400081E04 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930C918E12BF300081E04 /* Audio.cpp */; };
-		1A09312E18E12BF400081E04 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930CB18E12BF300081E04 /* Camera.cpp */; };
-		1A09312F18E12BF400081E04 /* Characters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930CD18E12BF300081E04 /* Characters.cpp */; };
-		1A09313018E12BF400081E04 /* Colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930CF18E12BF300081E04 /* Colors.cpp */; };
-		1A09313118E12BF400081E04 /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930D118E12BF300081E04 /* Geometry.cpp */; };
-		1A09313218E12BF400081E04 /* SGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0930D518E12BF300081E04 /* SGSDK.framework */; };
-		1A09313318E12BF400081E04 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930D618E12BF300081E04 /* Graphics.cpp */; };
-		1A09313418E12BF400081E04 /* Images.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930D818E12BF300081E04 /* Images.cpp */; };
-		1A09313518E12BF400081E04 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930DA18E12BF300081E04 /* Input.cpp */; };
-		1A09313618E12BF400081E04 /* SGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0930DD18E12BF300081E04 /* SGSDK.framework */; };
-		1A09313718E12BF400081E04 /* Networking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930DE18E12BF300081E04 /* Networking.cpp */; };
-		1A09313818E12BF400081E04 /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930E018E12BF300081E04 /* Physics.cpp */; };
-		1A09313918E12BF400081E04 /* Resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930E218E12BF300081E04 /* Resources.cpp */; };
-		1A09313A18E12BF400081E04 /* SGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0930E618E12BF300081E04 /* SGSDK.framework */; };
-		1A09313B18E12BF400081E04 /* SGSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930E718E12BF300081E04 /* SGSDK.cpp */; };
-		1A09313C18E12BF400081E04 /* Sprites.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930E918E12BF300081E04 /* Sprites.cpp */; };
-		1A09313D18E12BF400081E04 /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930EC18E12BF300081E04 /* Text.cpp */; };
-		1A09313E18E12BF400081E04 /* Timers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930EE18E12BF300081E04 /* Timers.cpp */; };
-		1A09313F18E12BF400081E04 /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930F118E12BF300081E04 /* UserInterface.cpp */; };
-		1A09314018E12BF400081E04 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A0930F318E12BF300081E04 /* Utils.cpp */; };
 		1A09314118E12BF400081E04 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A09312618E12BF300081E04 /* main.cpp */; };
 		1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3BE18E66AE100076F3F /* Robot.cpp */; };
 		1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3C118E67B7200076F3F /* robotTest.cpp */; };
@@ -42,7 +19,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				1A0930BC18E12BB000081E04 /* RobotRally.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -50,92 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1A0930B618E12BB000081E04 /* RobotRally */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RobotRally; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A0930BB18E12BB000081E04 /* RobotRally.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RobotRally.1; sourceTree = "<group>"; };
-		1A0930C318E12BF300081E04 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SwinGame_ProjectTemplate/Info.plist; sourceTree = "<group>"; };
-		1A0930C518E12BF300081E04 /* Animations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animations.cpp; sourceTree = "<group>"; };
-		1A0930C618E12BF300081E04 /* Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animations.h; sourceTree = "<group>"; };
-		1A0930C718E12BF300081E04 /* Arduino.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Arduino.cpp; sourceTree = "<group>"; };
-		1A0930C818E12BF300081E04 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
-		1A0930C918E12BF300081E04 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio.cpp; sourceTree = "<group>"; };
-		1A0930CA18E12BF300081E04 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
-		1A0930CB18E12BF300081E04 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
-		1A0930CC18E12BF300081E04 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		1A0930CD18E12BF300081E04 /* Characters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Characters.cpp; sourceTree = "<group>"; };
-		1A0930CE18E12BF300081E04 /* Characters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Characters.h; sourceTree = "<group>"; };
-		1A0930CF18E12BF300081E04 /* Colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Colors.cpp; sourceTree = "<group>"; };
-		1A0930D018E12BF300081E04 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
-		1A0930D118E12BF300081E04 /* Geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
-		1A0930D218E12BF300081E04 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
-		1A0930D518E12BF300081E04 /* SGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSDK.framework; sourceTree = "<group>"; };
-		1A0930D618E12BF300081E04 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
-		1A0930D718E12BF300081E04 /* Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graphics.h; sourceTree = "<group>"; };
-		1A0930D818E12BF300081E04 /* Images.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Images.cpp; sourceTree = "<group>"; };
-		1A0930D918E12BF300081E04 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
-		1A0930DA18E12BF300081E04 /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
-		1A0930DB18E12BF300081E04 /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
-		1A0930DD18E12BF300081E04 /* SGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSDK.framework; sourceTree = "<group>"; };
-		1A0930DE18E12BF300081E04 /* Networking.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Networking.cpp; sourceTree = "<group>"; };
-		1A0930DF18E12BF300081E04 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		1A0930E018E12BF300081E04 /* Physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
-		1A0930E118E12BF300081E04 /* Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
-		1A0930E218E12BF300081E04 /* Resources.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resources.cpp; sourceTree = "<group>"; };
-		1A0930E318E12BF300081E04 /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
-		1A0930E618E12BF300081E04 /* SGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSDK.framework; sourceTree = "<group>"; };
-		1A0930E718E12BF300081E04 /* SGSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SGSDK.cpp; sourceTree = "<group>"; };
-		1A0930E818E12BF300081E04 /* SGSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSDK.h; sourceTree = "<group>"; };
-		1A0930E918E12BF300081E04 /* Sprites.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprites.cpp; sourceTree = "<group>"; };
-		1A0930EA18E12BF300081E04 /* Sprites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprites.h; sourceTree = "<group>"; };
-		1A0930EB18E12BF300081E04 /* SwinGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwinGame.h; sourceTree = "<group>"; };
-		1A0930EC18E12BF300081E04 /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Text.cpp; sourceTree = "<group>"; };
-		1A0930ED18E12BF300081E04 /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
-		1A0930EE18E12BF300081E04 /* Timers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timers.cpp; sourceTree = "<group>"; };
-		1A0930EF18E12BF300081E04 /* Timers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timers.h; sourceTree = "<group>"; };
-		1A0930F018E12BF300081E04 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
-		1A0930F118E12BF300081E04 /* UserInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserInterface.cpp; sourceTree = "<group>"; };
-		1A0930F218E12BF300081E04 /* UserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterface.h; sourceTree = "<group>"; };
-		1A0930F318E12BF300081E04 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
-		1A0930F418E12BF300081E04 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		1A0930F618E12BF300081E04 /* jpeg.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = jpeg.dll; sourceTree = "<group>"; };
-		1A0930F718E12BF300081E04 /* libfreetype-6.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libfreetype-6.dll"; sourceTree = "<group>"; };
-		1A0930F818E12BF300081E04 /* libogg-0.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libogg-0.dll"; sourceTree = "<group>"; };
-		1A0930F918E12BF300081E04 /* libpng12-0.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libpng12-0.dll"; sourceTree = "<group>"; };
-		1A0930FA18E12BF300081E04 /* libpng13.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = libpng13.dll; sourceTree = "<group>"; };
-		1A0930FB18E12BF300081E04 /* libtiff-3.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libtiff-3.dll"; sourceTree = "<group>"; };
-		1A0930FC18E12BF300081E04 /* libvorbis-0.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libvorbis-0.dll"; sourceTree = "<group>"; };
-		1A0930FD18E12BF300081E04 /* libvorbisfile-3.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libvorbisfile-3.dll"; sourceTree = "<group>"; };
-		1A0930FE18E12BF300081E04 /* mikmod.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = mikmod.dll; sourceTree = "<group>"; };
-		1A0930FF18E12BF300081E04 /* ogg.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = ogg.dll; sourceTree = "<group>"; };
-		1A09310018E12BF300081E04 /* SDL.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL.dll; sourceTree = "<group>"; };
-		1A09310118E12BF300081E04 /* SDL_gfx.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL_gfx.dll; sourceTree = "<group>"; };
-		1A09310218E12BF300081E04 /* SDL_image.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL_image.dll; sourceTree = "<group>"; };
-		1A09310318E12BF300081E04 /* SDL_mixer.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL_mixer.dll; sourceTree = "<group>"; };
-		1A09310418E12BF300081E04 /* SDL_net.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL_net.dll; sourceTree = "<group>"; };
-		1A09310518E12BF300081E04 /* SDL_ttf.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL_ttf.dll; sourceTree = "<group>"; };
-		1A09310618E12BF300081E04 /* smpeg.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = smpeg.dll; sourceTree = "<group>"; };
-		1A09310718E12BF300081E04 /* swingame.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swingame.rc; sourceTree = "<group>"; };
-		1A09310818E12BF300081E04 /* zlib1.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = zlib1.dll; sourceTree = "<group>"; };
-		1A09310B18E12BF300081E04 /* startup.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = startup.txt; sourceTree = "<group>"; };
-		1A09310D18E12BF300081E04 /* FileDialog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FileDialog.txt; sourceTree = "<group>"; };
-		1A09310E18E12BF300081E04 /* splash.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = splash.txt; sourceTree = "<group>"; };
-		1A09311018E12BF300081E04 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
-		1A09311118E12BF300081E04 /* cour.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cour.ttf; sourceTree = "<group>"; };
-		1A09311218E12BF300081E04 /* maven_pro_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = maven_pro_regular.ttf; sourceTree = "<group>"; };
-		1A09311418E12BF300081E04 /* fdFile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fdFile.png; sourceTree = "<group>"; };
-		1A09311518E12BF300081E04 /* fdFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fdFolder.png; sourceTree = "<group>"; };
-		1A09311618E12BF300081E04 /* FileDialog_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FileDialog_Active.png; sourceTree = "<group>"; };
-		1A09311718E12BF300081E04 /* FileDialog_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FileDialog_Background.png; sourceTree = "<group>"; };
-		1A09311818E12BF300081E04 /* FileDialog_Inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FileDialog_Inactive.png; sourceTree = "<group>"; };
-		1A09311918E12BF300081E04 /* FileDialog_Scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FileDialog_Scroll.png; sourceTree = "<group>"; };
-		1A09311A18E12BF300081E04 /* FileDialog_ScrollSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FileDialog_ScrollSmall.png; sourceTree = "<group>"; };
-		1A09311B18E12BF300081E04 /* Swinburne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Swinburne.jpg; sourceTree = "<group>"; };
-		1A09311C18E12BF300081E04 /* SwinGameAni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwinGameAni.png; sourceTree = "<group>"; };
-		1A09311F18E12BF300081E04 /* FileDialog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FileDialog.txt; sourceTree = "<group>"; };
-		1A09312118E12BF300081E04 /* error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = error.wav; sourceTree = "<group>"; };
-		1A09312218E12BF300081E04 /* SwinGameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SwinGameStart.wav; sourceTree = "<group>"; };
-		1A09312318E12BF300081E04 /* SwinGame.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SwinGame.icns; sourceTree = "<group>"; };
-		1A09312418E12BF300081E04 /* SwinGame.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = SwinGame.ico; sourceTree = "<group>"; };
 		1A09312618E12BF300081E04 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1A09312718E12BF300081E04 /* SwinGame.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SwinGame.icns; path = SwinGame_ProjectTemplate/SwinGame.icns; sourceTree = "<group>"; };
 		1A33A3BE18E66AE100076F3F /* Robot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Robot.cpp; sourceTree = "<group>"; };
 		1A33A3BF18E66AE100076F3F /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		1A33A3C118E67B7200076F3F /* robotTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = robotTest.cpp; sourceTree = "<group>"; };
@@ -147,9 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A09313218E12BF400081E04 /* SGSDK.framework in Frameworks */,
-				1A09313A18E12BF400081E04 /* SGSDK.framework in Frameworks */,
-				1A09313618E12BF400081E04 /* SGSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,216 +63,9 @@
 		1A0930B818E12BB000081E04 /* RobotRally */ = {
 			isa = PBXGroup;
 			children = (
-				1A0930C318E12BF300081E04 /* Info.plist */,
-				1A0930C418E12BF300081E04 /* lib */,
-				1A09310918E12BF300081E04 /* Resources */,
 				1A09312518E12BF300081E04 /* src */,
-				1A09312718E12BF300081E04 /* SwinGame.icns */,
-				1A0930BB18E12BB000081E04 /* RobotRally.1 */,
 			);
 			path = RobotRally;
-			sourceTree = "<group>";
-		};
-		1A0930C418E12BF300081E04 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930C518E12BF300081E04 /* Animations.cpp */,
-				1A0930C618E12BF300081E04 /* Animations.h */,
-				1A0930C718E12BF300081E04 /* Arduino.cpp */,
-				1A0930C818E12BF300081E04 /* Arduino.h */,
-				1A0930C918E12BF300081E04 /* Audio.cpp */,
-				1A0930CA18E12BF300081E04 /* Audio.h */,
-				1A0930CB18E12BF300081E04 /* Camera.cpp */,
-				1A0930CC18E12BF300081E04 /* Camera.h */,
-				1A0930CD18E12BF300081E04 /* Characters.cpp */,
-				1A0930CE18E12BF300081E04 /* Characters.h */,
-				1A0930CF18E12BF300081E04 /* Colors.cpp */,
-				1A0930D018E12BF300081E04 /* Colors.h */,
-				1A0930D118E12BF300081E04 /* Geometry.cpp */,
-				1A0930D218E12BF300081E04 /* Geometry.h */,
-				1A0930D318E12BF300081E04 /* godly */,
-				1A0930D618E12BF300081E04 /* Graphics.cpp */,
-				1A0930D718E12BF300081E04 /* Graphics.h */,
-				1A0930D818E12BF300081E04 /* Images.cpp */,
-				1A0930D918E12BF300081E04 /* Images.h */,
-				1A0930DA18E12BF300081E04 /* Input.cpp */,
-				1A0930DB18E12BF300081E04 /* Input.h */,
-				1A0930DC18E12BF300081E04 /* mac */,
-				1A0930DE18E12BF300081E04 /* Networking.cpp */,
-				1A0930DF18E12BF300081E04 /* Networking.h */,
-				1A0930E018E12BF300081E04 /* Physics.cpp */,
-				1A0930E118E12BF300081E04 /* Physics.h */,
-				1A0930E218E12BF300081E04 /* Resources.cpp */,
-				1A0930E318E12BF300081E04 /* Resources.h */,
-				1A0930E418E12BF300081E04 /* sdl13 */,
-				1A0930E718E12BF300081E04 /* SGSDK.cpp */,
-				1A0930E818E12BF300081E04 /* SGSDK.h */,
-				1A0930E918E12BF300081E04 /* Sprites.cpp */,
-				1A0930EA18E12BF300081E04 /* Sprites.h */,
-				1A0930EB18E12BF300081E04 /* SwinGame.h */,
-				1A0930EC18E12BF300081E04 /* Text.cpp */,
-				1A0930ED18E12BF300081E04 /* Text.h */,
-				1A0930EE18E12BF300081E04 /* Timers.cpp */,
-				1A0930EF18E12BF300081E04 /* Timers.h */,
-				1A0930F018E12BF300081E04 /* Types.h */,
-				1A0930F118E12BF300081E04 /* UserInterface.cpp */,
-				1A0930F218E12BF300081E04 /* UserInterface.h */,
-				1A0930F318E12BF300081E04 /* Utils.cpp */,
-				1A0930F418E12BF300081E04 /* Utils.h */,
-				1A0930F518E12BF300081E04 /* win */,
-			);
-			name = lib;
-			path = SwinGame_ProjectTemplate/lib;
-			sourceTree = "<group>";
-		};
-		1A0930D318E12BF300081E04 /* godly */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930D418E12BF300081E04 /* mac */,
-			);
-			path = godly;
-			sourceTree = "<group>";
-		};
-		1A0930D418E12BF300081E04 /* mac */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930D518E12BF300081E04 /* SGSDK.framework */,
-			);
-			path = mac;
-			sourceTree = "<group>";
-		};
-		1A0930DC18E12BF300081E04 /* mac */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930DD18E12BF300081E04 /* SGSDK.framework */,
-			);
-			path = mac;
-			sourceTree = "<group>";
-		};
-		1A0930E418E12BF300081E04 /* sdl13 */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930E518E12BF300081E04 /* mac */,
-			);
-			path = sdl13;
-			sourceTree = "<group>";
-		};
-		1A0930E518E12BF300081E04 /* mac */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930E618E12BF300081E04 /* SGSDK.framework */,
-			);
-			path = mac;
-			sourceTree = "<group>";
-		};
-		1A0930F518E12BF300081E04 /* win */ = {
-			isa = PBXGroup;
-			children = (
-				1A0930F618E12BF300081E04 /* jpeg.dll */,
-				1A0930F718E12BF300081E04 /* libfreetype-6.dll */,
-				1A0930F818E12BF300081E04 /* libogg-0.dll */,
-				1A0930F918E12BF300081E04 /* libpng12-0.dll */,
-				1A0930FA18E12BF300081E04 /* libpng13.dll */,
-				1A0930FB18E12BF300081E04 /* libtiff-3.dll */,
-				1A0930FC18E12BF300081E04 /* libvorbis-0.dll */,
-				1A0930FD18E12BF300081E04 /* libvorbisfile-3.dll */,
-				1A0930FE18E12BF300081E04 /* mikmod.dll */,
-				1A0930FF18E12BF300081E04 /* ogg.dll */,
-				1A09310018E12BF300081E04 /* SDL.dll */,
-				1A09310118E12BF300081E04 /* SDL_gfx.dll */,
-				1A09310218E12BF300081E04 /* SDL_image.dll */,
-				1A09310318E12BF300081E04 /* SDL_mixer.dll */,
-				1A09310418E12BF300081E04 /* SDL_net.dll */,
-				1A09310518E12BF300081E04 /* SDL_ttf.dll */,
-				1A09310618E12BF300081E04 /* smpeg.dll */,
-				1A09310718E12BF300081E04 /* swingame.rc */,
-				1A09310818E12BF300081E04 /* zlib1.dll */,
-			);
-			path = win;
-			sourceTree = "<group>";
-		};
-		1A09310918E12BF300081E04 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1A09310A18E12BF300081E04 /* animations */,
-				1A09310C18E12BF300081E04 /* bundles */,
-				1A09310F18E12BF300081E04 /* fonts */,
-				1A09311318E12BF300081E04 /* images */,
-				1A09311D18E12BF300081E04 /* maps */,
-				1A09311E18E12BF300081E04 /* panels */,
-				1A09312018E12BF300081E04 /* sounds */,
-				1A09312318E12BF300081E04 /* SwinGame.icns */,
-				1A09312418E12BF300081E04 /* SwinGame.ico */,
-			);
-			name = Resources;
-			path = SwinGame_ProjectTemplate/Resources;
-			sourceTree = "<group>";
-		};
-		1A09310A18E12BF300081E04 /* animations */ = {
-			isa = PBXGroup;
-			children = (
-				1A09310B18E12BF300081E04 /* startup.txt */,
-			);
-			path = animations;
-			sourceTree = "<group>";
-		};
-		1A09310C18E12BF300081E04 /* bundles */ = {
-			isa = PBXGroup;
-			children = (
-				1A09310D18E12BF300081E04 /* FileDialog.txt */,
-				1A09310E18E12BF300081E04 /* splash.txt */,
-			);
-			path = bundles;
-			sourceTree = "<group>";
-		};
-		1A09310F18E12BF300081E04 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				1A09311018E12BF300081E04 /* arial.ttf */,
-				1A09311118E12BF300081E04 /* cour.ttf */,
-				1A09311218E12BF300081E04 /* maven_pro_regular.ttf */,
-			);
-			path = fonts;
-			sourceTree = "<group>";
-		};
-		1A09311318E12BF300081E04 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				1A09311418E12BF300081E04 /* fdFile.png */,
-				1A09311518E12BF300081E04 /* fdFolder.png */,
-				1A09311618E12BF300081E04 /* FileDialog_Active.png */,
-				1A09311718E12BF300081E04 /* FileDialog_Background.png */,
-				1A09311818E12BF300081E04 /* FileDialog_Inactive.png */,
-				1A09311918E12BF300081E04 /* FileDialog_Scroll.png */,
-				1A09311A18E12BF300081E04 /* FileDialog_ScrollSmall.png */,
-				1A09311B18E12BF300081E04 /* Swinburne.jpg */,
-				1A09311C18E12BF300081E04 /* SwinGameAni.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		1A09311D18E12BF300081E04 /* maps */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = maps;
-			sourceTree = "<group>";
-		};
-		1A09311E18E12BF300081E04 /* panels */ = {
-			isa = PBXGroup;
-			children = (
-				1A09311F18E12BF300081E04 /* FileDialog.txt */,
-			);
-			path = panels;
-			sourceTree = "<group>";
-		};
-		1A09312018E12BF300081E04 /* sounds */ = {
-			isa = PBXGroup;
-			children = (
-				1A09312118E12BF300081E04 /* error.wav */,
-				1A09312218E12BF300081E04 /* SwinGameStart.wav */,
-			);
-			path = sounds;
 			sourceTree = "<group>";
 		};
 		1A09312518E12BF300081E04 /* src */ = {
@@ -451,28 +132,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A09313B18E12BF400081E04 /* SGSDK.cpp in Sources */,
-				1A09312D18E12BF400081E04 /* Audio.cpp in Sources */,
-				1A09313918E12BF400081E04 /* Resources.cpp in Sources */,
-				1A09314018E12BF400081E04 /* Utils.cpp in Sources */,
-				1A09313D18E12BF400081E04 /* Text.cpp in Sources */,
-				1A09313818E12BF400081E04 /* Physics.cpp in Sources */,
-				1A09313F18E12BF400081E04 /* UserInterface.cpp in Sources */,
-				1A09313318E12BF400081E04 /* Graphics.cpp in Sources */,
 				1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */,
-				1A09313118E12BF400081E04 /* Geometry.cpp in Sources */,
-				1A09313C18E12BF400081E04 /* Sprites.cpp in Sources */,
-				1A09313718E12BF400081E04 /* Networking.cpp in Sources */,
 				1A09314118E12BF400081E04 /* main.cpp in Sources */,
-				1A09313E18E12BF400081E04 /* Timers.cpp in Sources */,
-				1A09313518E12BF400081E04 /* Input.cpp in Sources */,
-				1A09313018E12BF400081E04 /* Colors.cpp in Sources */,
-				1A09312C18E12BF400081E04 /* Arduino.cpp in Sources */,
-				1A09313418E12BF400081E04 /* Images.cpp in Sources */,
-				1A09312E18E12BF400081E04 /* Camera.cpp in Sources */,
-				1A09312F18E12BF400081E04 /* Characters.cpp in Sources */,
 				1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */,
-				1A09312B18E12BF400081E04 /* Animations.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 
 /////////////////constructors
 /** 
- Builds standard robot facing North with full health
+ Builds standard robot facing South with full health
  */
 robot::robot(){
     health = 6;
@@ -21,8 +21,16 @@ robot::robot(){
  @param face what direction to face at start
  */
 robot::robot(_direction face){
+	heading = face;
     health = 6;
 }
+
+
+// TODO deconstructor ???
+//robot::~robot(){
+//	delete [] robot;
+//};
+
 
 /////////////////private methods
 /**
@@ -52,13 +60,17 @@ Removes health by passed amount, won't decrement below 0
  @param amount how much health to remove
  @return health, current health
  */
+	// included decrementHealth() not sure its created properly
 int robot::decrementHealth(int amount){
     if ((health - amount) > 0) {
-        health = health - amount;
+        while (amount > 0) {
+			decrementHealth();
+			amount--;
+		}
         return health;
     }else{
         health = 0;
-        std::cout << "This robot is not feeling too good :( Health: " << health << std::endl;
+//		std::cout << "This robot is not feeling too good :( Health: " << health << std::endl;
         return health;
     }
 }
@@ -81,7 +93,9 @@ Rotates robot
  @param turn can be left, right or Uturn
  @return true if sucessful, false if test conditions not meet and robot didnt turn
  */
-bool robot::rotate(_rotate turn){       //TODO why does this method require type _rotate and all other enums use the direction not _direction??
+bool robot::rotate(_rotate turn){
+		//TODO why does this method require type _rotate and all
+		//other enums use the direction not _direction??
     switch (turn) {
         case turnLeft:
             if (heading == North) {
@@ -100,7 +114,6 @@ bool robot::rotate(_rotate turn){       //TODO why does this method require type
                 return true;
             }
         case Uturn:
-            
             switch (heading) {
                 case North:
                     heading = South;
@@ -123,10 +136,34 @@ bool robot::rotate(_rotate turn){       //TODO why does this method require type
             return false;
     }
 }
+
+std::string robot::dir_to_Str(_direction d){
+	switch (d) {
+		case North:
+			return "North";
+			break;
+		case East:
+			return "East";
+			break;
+		case South:
+			return "South";
+			break;
+		case West:
+			return "West";
+			break;
+			
+		default:
+			return "Failed";
+			break;
+	}
+}
+
 /**
  Returnes a status string
  @return string
  */
 std::string robot::toString(){
-    return "help i dont want to be a robot anymore, i want to be a lumber jack!";
+		//	std::string a = "Health: " << health << "Heading: " << dir_to_Str(heading) << std::endl;
+    return "something";
 }
+
