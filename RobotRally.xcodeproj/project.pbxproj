@@ -560,6 +560,7 @@
 					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/sdl13/mac",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -574,6 +575,7 @@
 					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/sdl13/mac",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};

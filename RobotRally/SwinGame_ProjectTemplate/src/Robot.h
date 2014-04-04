@@ -13,17 +13,17 @@
 #include <string>
 
 enum _direction {
-    North,
+    North = 0,
     East,
     South,
     West,
 } ;
 
 enum _rotate {
-    turnLeft,
+    turnLeft = 0,
     turnRight,
     Uturn,
-} rotate;
+} ;
 
 class robot {
 private:

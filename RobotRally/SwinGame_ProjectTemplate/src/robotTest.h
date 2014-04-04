@@ -9,31 +9,19 @@
 #ifndef __RobotRally__robotTest__
 #define __RobotRally__robotTest__
 
-#include <iostream>
 #include "Robot.h"
-#include <vector>
 
-class robotTest {
+class robotTest
+{
     
 private:
-    std::vector<robot *> _Robots;
-    
-    robot *underTestRobot;
-    
-    
-    
-    void buildStdRobot();
-    void buildFacingRobot();
-   
-    //list of tests
-    void testStdRobotDir();
     
 public:
     robotTest();
     
-    ~robotTest();
     
-    int battery_of_tests();
+    void mainTest();
+    
     
 };
 #endif /* defined(__RobotRally__robotTest__) */
