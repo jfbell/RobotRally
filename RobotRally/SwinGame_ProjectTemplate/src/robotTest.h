@@ -15,10 +15,9 @@ class robotTest
 {
     
 private:
-	std::string dir_to_Str(_direction d);
-	void	testHealth(robot *bruce);
-	
+	void testHealth(robot *bruce);
 	void TestHeading(robot *burce);
+    void testBuildDirection();
     
 public:
     robotTest();

@@ -49,9 +49,8 @@ public:
     _direction getHeading();
     int getHealth();
     bool rotate(_rotate turn);
-	std::string dir_to_Str(_direction d);
 	std::string toString();
-//	std::ostream& operator<<( std::ostream& aOStream, const robot& r);
+	std::string toString(_direction d); //overloaded function, genious!
 };
 
 

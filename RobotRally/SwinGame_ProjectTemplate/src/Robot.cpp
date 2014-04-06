@@ -128,17 +128,24 @@ bool robot::rotate(_rotate turn){
                     heading = East;
                     return true;
                 default:
-                    std::cout << "U-turn failing" << std::endl;
+                    std::cout << "U-turn failed" << std::endl;
                     return false;
             }
         default:
-            std::cout << "turn failing" << std::endl;
+            std::cout << "turn failed" << std::endl;
             return false;
     }
 }
-
-std::string robot::dir_to_Str(_direction d){
-	switch (d) {
+/**
+ to_string is overloaded to report the values of the enums
+ correctly depending on what is passed in, making the output of 
+ different status messages human readable.
+ @param direction 
+ @return std::string
+ */
+std::string robot::toString(_direction d)
+{
+    switch (d) {
 		case North:
 			return "North";
 			break;
@@ -153,7 +160,7 @@ std::string robot::dir_to_Str(_direction d){
 			break;
 			
 		default:
-			return "Failed";
+			return "Direction Failed";
 			break;
 	}
 }
@@ -163,7 +170,7 @@ std::string robot::dir_to_Str(_direction d){
  @return string
  */
 std::string robot::toString(){
-		//	std::string a = "Health: " << health << "Heading: " << dir_to_Str(heading) << std::endl;
+//		std::string a = "Health: " << health << "Heading: " << toString(heading) << std::endl;
     return "something";
 }
 

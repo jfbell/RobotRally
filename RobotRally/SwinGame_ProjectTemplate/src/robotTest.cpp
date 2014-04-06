@@ -10,31 +10,12 @@
 
 using namespace std;
 
-robotTest::robotTest(){
-    
-}
+robotTest::robotTest(){}
 
-string robotTest::dir_to_Str(_direction d){
-	switch (d) {
-		case North:
-			return "North";
-			break;
-		case East:
-			return "East";
-			break;
-		case South:
-			return "South";
-			break;
-		case West:
-			return "West";
-			break;
-			
-		default:
-			return "Failed";
-			break;
-	}
-}
-
+/**
+ Tests the health methods of a robot.
+ @param bruce will be the robot under test
+ */
 void robotTest::testHealth(robot *bruce){
 	
 	cout << "Health Test"<< endl << "Current Health: " << bruce->getHealth() << endl;
@@ -45,8 +26,7 @@ void robotTest::testHealth(robot *bruce){
 		cout <<	"Current Health: " << bruce->getHealth() << endl;
 	} while (bruce->getHealth() != 0);
 	
-	
-		//	Silly tests
+		//	Silly input tests
 	bruce->decrementHealth(-1);
 	cout << "Silly test input (-1) : " << bruce->getHealth() << endl;
 	
@@ -64,67 +44,112 @@ void robotTest::testHealth(robot *bruce){
 	
 }
 
-
+/**
+ Tests heading methords and handeling of the heading enum, 
+ esp. through transisitions around the various directions
+ @param bruce will be the robot under test
+ */
+void robotTest::TestHeading(robot *bruce){
 	// TODO creat a self test with a pass fail, ie an array that get ticked
 	//off when each sequence of each test is passed.
-	//
-void robotTest::TestHeading(robot *bruce){
-	
+    
 		//	enum PassFail {
 		//		Fail = 0,
 		//		Pass
 		//	};
-		//
 		//	PassFail scoreCard[] = {Fail};
 	
 	cout << "Heading and Rotation Test"<< endl <<
-	"now facing: " << dir_to_Str(bruce->getHeading()) << endl;
+	"now facing: " << bruce->toString((bruce->getHeading())) << endl;
 	
 		//	test right rotate
 	cout << "Rotating robot right ... ";
 	do {
 		bruce->rotate(turnRight);
-		cout << "now facing: " << dir_to_Str(bruce->getHeading()) << endl;
+		cout << "now facing: " << bruce->toString(bruce->getHeading()) << endl;
 	} while (bruce->getHeading() != South);
 	
 		//	test left rotate
 	cout << "Rotating robot left ... ";
 	do {
 		bruce->rotate(turnLeft);
-		cout << "now facing: " << dir_to_Str(bruce->getHeading()) << endl;
+		cout << "now facing: " << bruce->toString(bruce->getHeading()) << endl;
 	} while (bruce->getHeading() != South);
 	
-		//	TODO test Uturn
+		//  test Uturn
 	cout << "Performing U-Turn ... " << endl;
 	bruce->rotate(Uturn);
-	cout << "now facing: " << dir_to_Str(bruce->getHeading()) << endl;
+	cout << "now facing: " << bruce->toString(bruce->getHeading()) << endl;
 	bruce->rotate(turnLeft);
-	cout << "Left Turn now facing: " << dir_to_Str(bruce->getHeading()) << endl;
+	cout << "Left Turn now facing: " << bruce->toString(bruce->getHeading()) << endl;
 	cout << "Performing next U-Turn" << endl;
 	bruce->rotate(Uturn);
-	cout << "now facing: " << dir_to_Str(bruce->getHeading()) << endl;
+	cout << "now facing: " << bruce->toString(bruce->getHeading()) << endl;
 }
 
+/**
+ Testing for building robots heading in perticular directions, 
+ robots are built and destroied as needed with in the program.
+ Also contians a score card feature that reports sucess or 
+ failular of the procedure
+ */
+void robotTest::testBuildDirection(){
+
+    char result[] = {0,0,0,0};
+    const char PassResult[] = {'N','E','S','W'};
+    
+    robot *n = new robot(North);
+    robot *s = new robot(South);
+    robot *e = new robot(East);
+    robot *w = new robot(West);
+
+    if (n->getHeading() == North) {
+        result[North] = 'N';
+    }
+    if (s->getHeading() == South) {
+        result[South] = 'S';
+    }
+    if (e->getHeading() == East) {
+        result[East] = 'E';
+    }
+    if (w->getHeading() == West) {
+        result[West] = 'W';
+    }
+    
+    if (result[0] == PassResult[0] &&
+        result[1] == PassResult[1] &&
+        result[2] == PassResult[2] &&
+        result[3] == PassResult[3]) {
+        cout << "Direction Build: PASS" << endl;
+    }else{
+        cout << "Direction Build: Fail" << endl;
+    }
+    
+    delete n;
+    delete s;
+    delete e;
+    delete w;
+    
+}
+
+/**
+ Builds robot to be tested, reports initial conditions then runs the battery
+ of tests above and is responsibe for destroying the est robot at the end.
+ */
 void robotTest::mainTest(){
     cout << "Creating robot object" << endl;
     robot *r = new robot();
     
-    cout << "new robot is facing: " << dir_to_Str(r->getHeading()) << endl;
+    cout << "new robot is facing: " << r->toString(r->getHeading()) << endl;
     cout << "and has health: " << r->getHealth() << endl << endl;
     
 	TestHeading( r );
 	testHealth( r );
 	
+    testBuildDirection();
+    
 	cout << "Testing Complete" << endl << endl;
     
 	delete r;
 
 }
-/*
- TODO
- make a robot object to apply the tests to,
- 
- write test procrdures in methods to work against the created robot
- 
- run the test mothods in the main test method call that from main
- */
