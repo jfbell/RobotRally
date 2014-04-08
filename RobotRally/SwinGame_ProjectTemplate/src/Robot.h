@@ -12,6 +12,8 @@
 #include <iostream>
 #include <string>
 
+class tile;
+
 enum _direction {
     North = 0,
     East,
@@ -30,12 +32,13 @@ private:
     //    instance variables
     int health;                 //health can be a value between 0 and 6 only
     _direction heading;          //direction defined by direction  enum _direction
-    
+    tile* currentTile;
     
     //    private methods
     bool    decrementHealth();
     void setHeading(_direction face);
     
+    bool moveOneSpot();
     
 public:
     //constructors
@@ -52,6 +55,11 @@ public:
     bool rotate(_rotate turn);
 	std::string toString();
 	std::string toString(_direction d); //overloaded function, genious!
+    
+    //Tile interface
+    void setCurrentTile(tile* tile);
+    tile* getCurrentTile();
+    void move(int steps);
 };
 
 

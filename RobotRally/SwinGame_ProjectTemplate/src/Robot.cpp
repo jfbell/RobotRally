@@ -8,9 +8,10 @@
 
 #include "Robot.h"
 #include <strstream>
+#include "Tile.h"
 
 /////////////////constructors
-/** 
+/**
  Builds standard robot facing South with full health
  */
 robot::robot(){
@@ -35,7 +36,7 @@ robot::robot(_direction face){
 
 /////////////////private methods
 /**
-Remove one from health
+ Remove one from health
  @return bool true if health can be decremented ie doing so will not push health below 0
  */
 bool robot::decrementHealth(){
@@ -48,7 +49,7 @@ bool robot::decrementHealth(){
     }
 }
 /**
-Sets heading according to param face
+ Sets heading according to param face
  @param face type _direction
  */
 void robot::setHeading(_direction face){
@@ -57,11 +58,11 @@ void robot::setHeading(_direction face){
 
 /////////////////public methods
 /**
-Removes health by passed amount, won't decrement below 0
+ Removes health by passed amount, won't decrement below 0
  @param amount how much health to remove
  @return health, current health
  */
-	// included decrementHealth() not sure its created properly
+// included decrementHealth() not sure its created properly
 int robot::decrementHealth(int amount){
     if ((health - amount) > 0) {
         while (amount > 0) {
@@ -71,7 +72,7 @@ int robot::decrementHealth(int amount){
         return health;
     }else{
         health = 0;
-//		std::cout << "This robot is not feeling too good :( Health: " << health << std::endl;
+        //		std::cout << "This robot is not feeling too good :( Health: " << health << std::endl;
         return health;
     }
 }
@@ -90,13 +91,13 @@ int robot::getHealth(){
     return health;
 }
 /**
-Rotates robot
+ Rotates robot
  @param turn can be left, right or Uturn
  @return true if sucessful, false if test conditions not meet and robot didnt turn
  */
 bool robot::rotate(_rotate turn){
-		//TODO why does this method require type _rotate and all
-		//other enums use the direction not _direction??
+    //TODO why does this method require type _rotate and all
+    //other enums use the direction not _direction??
     switch (turn) {
         case turnLeft:
             if (heading == North) {
@@ -139,9 +140,9 @@ bool robot::rotate(_rotate turn){
 }
 /**
  to_string is overloaded to report the values of the enums
- correctly depending on what is passed in, making the output of 
+ correctly depending on what is passed in, making the output of
  different status messages human readable.
- @param direction 
+ @param direction
  @return std::string
  */
 std::string robot::toString(_direction d)
@@ -171,7 +172,7 @@ std::string robot::toString(_direction d)
  @return string
  */
 std::string robot::toString(){
-		std::strstream a;
+    std::strstream a;
     a << "Robot status:"<<std::endl;
     a << "Health: " << health << std::endl << "Heading: " << toString(heading) << std::endl;
     
@@ -179,3 +180,28 @@ std::string robot::toString(){
     return a.str();
 }
 
+//Tile interface
+bool robot::moveOneSpot(){
+    if (currentTile->getTile(heading) != NULL) {
+        currentTile->setVisitor(NULL);
+        setCurrentTile(currentTile->getTile(heading));
+        currentTile->setVisitor(this);
+        return true;
+    }else{
+        return false;
+    }
+}
+
+void robot::setCurrentTile(tile* tile){
+    currentTile = tile;
+}
+
+tile* robot::getCurrentTile(){
+    return currentTile;
+}
+
+void robot::move(int steps){
+    for (int i = steps; i > 0; i--) {
+        moveOneSpot();
+    }
+}
