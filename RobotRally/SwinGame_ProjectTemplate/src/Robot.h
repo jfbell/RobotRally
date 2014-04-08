@@ -31,6 +31,7 @@ private:
     int health;                 //health can be a value between 0 and 6 only
     _direction heading;          //direction defined by direction  enum _direction
     
+    
     //    private methods
     bool    decrementHealth();
     void setHeading(_direction face);

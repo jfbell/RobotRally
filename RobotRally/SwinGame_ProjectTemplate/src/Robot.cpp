@@ -7,6 +7,7 @@
 //
 
 #include "Robot.h"
+#include <strstream>
 
 /////////////////constructors
 /** 
@@ -170,7 +171,11 @@ std::string robot::toString(_direction d)
  @return string
  */
 std::string robot::toString(){
-//		std::string a = "Health: " << health << "Heading: " << toString(heading) << std::endl;
-    return "something";
+		std::strstream a;
+    a << "Robot status:"<<std::endl;
+    a << "Health: " << health << std::endl << "Heading: " << toString(heading) << std::endl;
+    
+    // report health and heading as a string
+    return a.str();
 }
 

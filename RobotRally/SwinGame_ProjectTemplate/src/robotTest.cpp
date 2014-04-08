@@ -63,14 +63,14 @@ void robotTest::TestHeading(robot *bruce){
 	"now facing: " << bruce->toString((bruce->getHeading())) << endl;
 	
 		//	test right rotate
-	cout << "Rotating robot right ... ";
+	cout << "Rotating robot right ... " << endl;
 	do {
 		bruce->rotate(turnRight);
 		cout << "now facing: " << bruce->toString(bruce->getHeading()) << endl;
 	} while (bruce->getHeading() != South);
 	
 		//	test left rotate
-	cout << "Rotating robot left ... ";
+	cout << "Rotating robot left ... "<< endl;
 	do {
 		bruce->rotate(turnLeft);
 		cout << "now facing: " << bruce->toString(bruce->getHeading()) << endl;
@@ -139,9 +139,11 @@ void robotTest::testBuildDirection(){
 void robotTest::mainTest(){
     cout << "Creating robot object" << endl;
     robot *r = new robot();
+
+    cout << r->toString();
     
-    cout << "new robot is facing: " << r->toString(r->getHeading()) << endl;
-    cout << "and has health: " << r->getHealth() << endl << endl;
+//    cout << "new robot is facing: " << r->toString(r->getHeading()) << endl;
+//    cout << "and has health: " << r->getHealth() << endl << endl;
     
 	TestHeading( r );
 	testHealth( r );
