@@ -59,7 +59,8 @@ public:
     //Tile interface
     void setCurrentTile(tile* tile);
     tile* getCurrentTile();
-    void move(int steps);
+//    void move(int steps);
+    bool move(int steps);
 };
 
 

@@ -200,8 +200,25 @@ tile* robot::getCurrentTile(){
     return currentTile;
 }
 
-void robot::move(int steps){
-    for (int i = steps; i > 0; i--) {
-        moveOneSpot();
+bool robot::move(int steps){
+    bool result = false;
+    if (steps > 0) {
+        for (int i = steps; i > 0; i--) {
+            result = moveOneSpot();
+            if (result == false) break;
+        }
+    }else{
+        rotate(Uturn);
+        for (int i = -steps; i > 0; i--) {
+            result = moveOneSpot();
+            if (result == false) break;
+        }
+        result = rotate(Uturn);
     }
+    return result;
 }
+
+
+
+
+
