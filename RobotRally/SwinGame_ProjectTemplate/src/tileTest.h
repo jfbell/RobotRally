@@ -41,7 +41,8 @@ private:
     void testWhenRobotNull();
     
 public:
-    void mainTileTest( vector<string> args );
+    testTile();
+    void mainTileTest();
 
 };
 

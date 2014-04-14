@@ -6,6 +6,8 @@
 	//  Copyright (c) 2014 BellDesign. All rights reserved.
 	//
 
+// TODO show what is expected from each test
+
 #include "robotTest.h"
 
 using namespace std;

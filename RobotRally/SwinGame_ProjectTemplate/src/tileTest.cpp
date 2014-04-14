@@ -12,35 +12,40 @@
 
 
 #define NO_TILES 5
+
+testTile::testTile(){
+}
+
 /**
  Creats the testRobot
- calls test robots toString function printing its starting 
+ calls test robots toString function printing its starting
  condition to the consuol
  takes and returns nothing
-*/
+ */
 void testTile::buildRobot(){
-    robot testRobot = *new robot;
-    std::cout << testRobot.toString();
+    testRobot = new robot();
+    std::cout << testRobot->toString();
 }
- /**
+/**
  Creates a board of tiles and returns them through a vector,
  number of tiles currently #define NO_TILES
  @return board, a vector of tiles
  */
-vector<tile*> testTile::buildTiles(){
+std::vector<tile*> testTile::buildTiles(){
     
-    vector<tile*> board = {};
+    std::vector<tile*> board = {};
     
     for (int i = 0 ; i < NO_TILES; i++) {
-        board[i] = new tile;
-    }
-
-    startTile = board[0];
     
-    connect2tiles(board[0], board[1], South);
-    connect2tiles(board[1], board[2], South);
-    connect2tiles(board[2], board[3], East);
-    connect2tiles(board[3], board[4], East);
+        board.push_back(new tile);// = new tile;
+    }
+    
+    startTile = board.at(0);
+    
+    connect2tiles(board.at(0), board.at(1), South);
+    connect2tiles(board.at(1), board.at(2), South);
+    connect2tiles(board.at(2), board.at(3), East);
+    connect2tiles(board.at(3), board.at(4), East);
     
     return board;
 }
@@ -71,7 +76,7 @@ bool testTile::connect2tiles(tile *A, tile *B, _direction dir){
             return false;
             break;
     }
-
+    
 }
 
 //tile* testTile::connectTile(){
@@ -79,11 +84,15 @@ bool testTile::connect2tiles(tile *A, tile *B, _direction dir){
 //}
 
 void testTile::placeRobotOnTile(){
-    startTile->setVisitor(testRobot);
+    
+    if (testRobot != NULL && startTile != NULL) {
+        startTile->setVisitor(testRobot);
+        testRobot->setCurrentTile(startTile);
+    }
 }
 
 bool testTile::moveRobot(int move){
-   return testRobot->move(move);
+    return testRobot->move(move);
 }
 void testTile::showResult(vector<tile*> showThis){
     for(int i = 0; i < showThis.size(); i++){
@@ -92,11 +101,16 @@ void testTile::showResult(vector<tile*> showThis){
 }
 void testTile::testSetUp(){
     
+    showResult(buildTiles());
+    buildRobot();
+    placeRobotOnTile();
+    
 }
 void testTile::testValidMove(){
-    
-    while (testRobot->getHeading() != South) {
+    _direction heading = testRobot->getHeading();
+    while (heading != South) {
         testRobot->rotate(turnRight);
+        heading = testRobot->getHeading();
     }
     testRobot->move(1);
     
@@ -110,9 +124,9 @@ void testTile::testValidMove(){
 }
 void testTile::testInvalidStepCount(){
     
-}
+} //???
 /**
- Tests an invalid move in a direction no tile is 
+ Tests an invalid move in a direction no tile is
  can be called from anytile*/
 void testTile::testInvalidDirection(){
     tile *currentTile = testRobot->getCurrentTile();
@@ -126,10 +140,12 @@ void testTile::testInvalidDirection(){
         testRobot->rotate(turnLeft);
     }
 }
+
 void testTile::testGetToEnd(){
-  tile *currentTile = testRobot->getCurrentTile();
-    while (currentTile->getTile(South)!= NULL) {
-        testRobot->move(1);
+    tile *currentTile = testRobot->getCurrentTile();
+    bool result = true;
+    while (currentTile->getTile(South)!= NULL && result != false) {
+       result = testRobot->move(1);
     }
     do {
         testRobot->rotate(turnLeft);
@@ -141,6 +157,7 @@ void testTile::testGetToEnd(){
     
     
 }
+
 void testTile::testTileGetMethods(){
     tile    *Atile = startTile->getTile(South);
     std::cout << "Start Tile: " << startTile << std::endl;
@@ -149,10 +166,8 @@ void testTile::testTileGetMethods(){
     std::cout << "South Tile: " << Atile->getTile(South) << std::endl;
     std::cout << "East Tile: " << Atile->getTile(East) << std::endl;
     std::cout << "West Tile: " << Atile->getTile(West) << std::endl;
-    
-    
-    
 }
+
 void testTile::testTileSetMethods(){
     std::cout << "Start Tile: " << startTile << std::endl;
     tile *_StartTile = startTile;
@@ -161,6 +176,7 @@ void testTile::testTileSetMethods(){
     std::cout << "South Tile: " << _StartTile->getTile(South) << std::endl;
     std::cout << "Setting Start tile to one tile to south ... " << std::endl;
     _StartTile = _StartTile->getTile(South);
+    
     if (SouthTile == _StartTile) {
         std::cout << "Start Tile is now: " << _StartTile;
         std::cout << " the change was a sucess" << std::endl;
@@ -168,9 +184,29 @@ void testTile::testTileSetMethods(){
         std::cout << "Set tile failed, oops! but its ok the startTile was preserved" << endl;
     }
 }
+
 void testTile::testWhenRobotNull(){
+    std::cout << "test when robot Null" << startTile->getVisitor() << std::endl;
+    // why is this ever useful
     
 }
 
-
-void testTile::mainTileTest( vector<string> args ){}
+void testTile::mainTileTest(){
+    
+    testSetUp();
+    
+    testValidMove();
+    
+    testInvalidStepCount();
+    
+    testInvalidDirection();
+    
+    testGetToEnd();
+    
+    testTileGetMethods();
+    testTileSetMethods();
+    testWhenRobotNull();
+    
+    
+    
+}

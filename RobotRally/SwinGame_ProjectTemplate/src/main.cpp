@@ -10,7 +10,7 @@
 #include <stdio.h>
 //#include "SwinGame.h"
 #include "robotTest.h"
-
+#include "tileTest.h"
 
 
 
@@ -20,6 +20,14 @@ int main(void) //int argc, const char * argv[])
     robotTest *rt = new robotTest;
     
     rt->mainTest();
+    
+    delete rt;
+    
+    testTile *t = new testTile();
+    
+    t->mainTileTest();
+    
+    delete t;
     
     return 0;
 }

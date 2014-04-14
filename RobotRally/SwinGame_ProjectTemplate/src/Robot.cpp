@@ -17,6 +17,7 @@
 robot::robot(){
     health = 6;
     heading = South;
+    currentTile = NULL;
 }
 /**
  Builds  robot facing towards param face with full health
@@ -25,6 +26,7 @@ robot::robot(){
 robot::robot(_direction face){
 	heading = face;
     health = 6;
+    currentTile = NULL;
 }
 
 
