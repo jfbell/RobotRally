@@ -11,6 +11,8 @@
 		1A09314118E12BF400081E04 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A09312618E12BF300081E04 /* main.cpp */; };
 		1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3BE18E66AE100076F3F /* Robot.cpp */; };
 		1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3C118E67B7200076F3F /* robotTest.cpp */; };
+		1AC9EEDF18FBB00C003E8810 /* TileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */; };
+		1AC9EF1118FCE964003E8810 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9EF0F18FCE964003E8810 /* Game.cpp */; };
 		1ACE735B18F156DA00A62190 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE735918F156DA00A62190 /* Tile.cpp */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +37,10 @@
 		1A33A3BF18E66AE100076F3F /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		1A33A3C118E67B7200076F3F /* robotTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = robotTest.cpp; sourceTree = "<group>"; };
 		1A33A3C218E67B7200076F3F /* robotTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = robotTest.h; sourceTree = "<group>"; };
-		1A645C2318F24DCC00962BCC /* RobotRally C plus plus C++ Implementation Plan Iteration 2 WvS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "RobotRally C plus plus C++ Implementation Plan Iteration 2 WvS.pdf"; sourceTree = "<group>"; };
+		1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileLoader.cpp; sourceTree = "<group>"; };
+		1AC9EEDE18FBB00C003E8810 /* TileLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileLoader.h; sourceTree = "<group>"; };
+		1AC9EF0F18FCE964003E8810 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		1AC9EF1018FCE964003E8810 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		1ACE735918F156DA00A62190 /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
 		1ACE735A18F156DA00A62190 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +75,6 @@
 		1A0930B818E12BB000081E04 /* RobotRally */ = {
 			isa = PBXGroup;
 			children = (
-				1A645C2318F24DCC00962BCC /* RobotRally C plus plus C++ Implementation Plan Iteration 2 WvS.pdf */,
 				1A09312518E12BF300081E04 /* src */,
 			);
 			path = RobotRally;
@@ -80,12 +84,16 @@
 			isa = PBXGroup;
 			children = (
 				1A09312618E12BF300081E04 /* main.cpp */,
+				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
+				1AC9EF1018FCE964003E8810 /* Game.h */,
 				1A33A3BE18E66AE100076F3F /* Robot.cpp */,
 				1A33A3BF18E66AE100076F3F /* Robot.h */,
 				1A33A3C118E67B7200076F3F /* robotTest.cpp */,
 				1A33A3C218E67B7200076F3F /* robotTest.h */,
 				1ACE735918F156DA00A62190 /* Tile.cpp */,
 				1ACE735A18F156DA00A62190 /* Tile.h */,
+				1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */,
+				1AC9EEDE18FBB00C003E8810 /* TileLoader.h */,
 				1A00D8CE18F3AFDB001AA887 /* tileTest.cpp */,
 				1A00D8CF18F3AFDB001AA887 /* tileTest.h */,
 			);
@@ -148,7 +156,9 @@
 				1A09314118E12BF400081E04 /* main.cpp in Sources */,
 				1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */,
 				1A00D8D018F3AFDB001AA887 /* tileTest.cpp in Sources */,
+				1AC9EEDF18FBB00C003E8810 /* TileLoader.cpp in Sources */,
 				1ACE735B18F156DA00A62190 /* Tile.cpp in Sources */,
+				1AC9EF1118FCE964003E8810 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

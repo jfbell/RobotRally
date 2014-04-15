@@ -186,7 +186,7 @@ void testTile::testTileSetMethods(){
 }
 
 void testTile::testWhenRobotNull(){
-    std::cout << "test when robot Null" << startTile->getVisitor() << std::endl;
+    std::cout << "test when robot Null " << startTile->getVisitor() << std::endl;
     // why is this ever useful
     
 }
