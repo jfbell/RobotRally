@@ -1,10 +1,10 @@
-//
-//  Robot.h
-//  RobotRally
-//
-//  Created by James Bell on 29/03/2014.
-//  Copyright (c) 2014 BellDesign. All rights reserved.
-//
+	//
+	//  Robot.h
+	//  RobotRally
+	//
+	//  Created by James Bell on 29/03/2014.
+	//  Copyright (c) 2014 BellDesign. All rights reserved.
+	//
 
 #ifndef __RobotRally__Robot__
 #define __RobotRally__Robot__
@@ -29,37 +29,39 @@ enum _rotate {
 
 class robot {
 private:
-    //    instance variables
+		//    instance variables
     int health;                 //health can be a value between 0 and 6 only
     _direction heading;          //direction defined by direction  enum _direction
     tile* currentTile;
     
-    //    private methods
-    bool    decrementHealth();
-    void setHeading(_direction face);
+		//    private methods
+    bool decrementHealth();
+    
     
     bool moveOneSpot();
     
 public:
-    //constructors
+		//constructors
     robot();
     robot(_direction face);
 	
-	//destructors
-//	~robot();
+		//destructors
+		//	~robot();
     
-    //public methods
+		//public methods
     int decrementHealth(int amount);
     _direction getHeading();
     int getHealth();
     bool rotate(_rotate turn);
+	void setHeading(_direction face);
+	
 	std::string toString();
 	std::string toString(_direction d); //overloaded function, genious!
     
-    //Tile interface
+		//Tile interface
     void setCurrentTile(tile* tile);
     tile* getCurrentTile();
-//    void move(int steps);
+		//    void move(int steps);
     bool move(int steps);
 };
 

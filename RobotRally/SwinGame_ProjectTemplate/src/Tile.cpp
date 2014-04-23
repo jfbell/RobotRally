@@ -1,15 +1,15 @@
-//
-//  Tile.cpp
-//  RobotRally
-//
-//  Created by James Bell on 6/04/2014.
-//  Copyright (c) 2014 BellDesign. All rights reserved.
-//
+	//
+	//  Tile.cpp
+	//  RobotRally
+	//
+	//  Created by James Bell on 6/04/2014.
+	//  Copyright (c) 2014 BellDesign. All rights reserved.
+	//
 
 #include "Tile.h"
 #include <strstream>
 
-//constructor
+	//constructor
 tile::tile(){
     _visitor = NULL;
     
@@ -17,6 +17,10 @@ tile::tile(){
     southTile = NULL;
     eastTile = NULL;
     westTile = NULL;
+	
+	connections = { NULL, NULL, NULL, NULL };
+	
+	use_connections = false;
 }
 tile::tile(robot* visitor){
     _visitor = visitor;
@@ -25,28 +29,52 @@ tile::tile(robot* visitor){
     southTile = NULL;
     eastTile = NULL;
     westTile = NULL;
+	
+	connections = { NULL, NULL, NULL, NULL };
+	
+	use_connections = false;
 }
 
-//methods
+	//methods
 tile* tile::getTile(_direction position){
-    
-    switch (position) {
-        case North:
-            return northTile;
-            break;
-        case South:
-            return southTile;
-            break;
-        case East:
-            return eastTile;
-            break;
-        case West:
-            return westTile;
-            break;
-        default:
-            return NULL;
-            break;
-    }
+	
+    if (use_connections == false) {
+		switch (position) {
+			case North:
+				return northTile;
+				break;
+			case South:
+				return southTile;
+				break;
+			case East:
+				return eastTile;
+				break;
+			case West:
+				return westTile;
+				break;
+			default:
+				return NULL;
+				break;
+		}
+	}else{
+		switch (position) {
+			case North:
+				return connections[North];
+				break;
+			case South:
+				return connections[South];
+				break;
+			case East:
+				return connections[East];
+				break;
+			case West:
+				return connections[West];
+				break;
+			default:
+				return NULL;
+				break;
+		}
+	}
 }
 robot* tile::getVisitor(){
     return _visitor;
@@ -63,16 +91,20 @@ void tile::setTile( tile* aTile, _direction position){
     switch (position) {
         case North:
             northTile = aTile;
+			connections[North] = aTile;
             break;
         case South:
             southTile = aTile;
+			connections[South] = aTile;
             break;
         case East:
             eastTile = aTile;
-            break;
+			connections[East] = aTile;
+			break;
         case West:
             westTile = aTile;
-            break;
+			connections[West] = aTile;
+			break;
     }
 }
 void tile::setVisitor(robot* visitor){
@@ -80,6 +112,13 @@ void tile::setVisitor(robot* visitor){
 }
 std::string tile::toString(){
     std::strstream s;
+	
+	if (use_connections == true) {
+		northTile = connections[North];
+		southTile = connections[South];
+		eastTile = connections[East];
+		westTile = connections[West];
+	}
 	
 	s << "Tile: " << this << std::endl;
 	
@@ -113,4 +152,11 @@ std::string tile::toString(){
         s << "West tile not connected" << std::endl;
     }
     return s.str();
+}
+
+void tile::use_connections_vector(){
+	use_connections = true;
+}
+void tile::do_not_use_connections_vector(){
+	use_connections = false;
 }

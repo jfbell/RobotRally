@@ -15,7 +15,7 @@
 #include "TileLoader.h"
 
 class Game {
-	robot player;
+	robot* player;
 	std::vector<tile*>	tileSet;
 	
 public:
@@ -23,6 +23,8 @@ public:
 	Game();
 	robot* Player();
 	std::vector<tile*>	getTiles();
+	
+	int	GameMain();
 };
 
 

@@ -1,16 +1,16 @@
-//
-//  Robot.cpp
-//  RobotRally
-//
-//  Created by James Bell on 29/03/2014.
-//  Copyright (c) 2014 BellDesign. All rights reserved.
-//
+	//
+	//  Robot.cpp
+	//  RobotRally
+	//
+	//  Created by James Bell on 29/03/2014.
+	//  Copyright (c) 2014 BellDesign. All rights reserved.
+	//
 
 #include "Robot.h"
 #include <strstream>
 #include "Tile.h"
 
-/////////////////constructors
+	/////////////////constructors
 /**
  Builds standard robot facing South with full health
  */
@@ -30,13 +30,13 @@ robot::robot(_direction face){
 }
 
 
-// TODO deconstructor ???
-//robot::~robot(){
-//	delete [] robot;
-//};
+	// TODO deconstructor ???
+	//robot::~robot(){
+	//	delete [] robot;
+	//};
 
 
-/////////////////private methods
+	/////////////////private methods
 /**
  Remove one from health
  @return bool true if health can be decremented ie doing so will not push health below 0
@@ -58,13 +58,13 @@ void robot::setHeading(_direction face){
     heading = face;
 }
 
-/////////////////public methods
+	/////////////////public methods
 /**
  Removes health by passed amount, won't decrement below 0
  @param amount how much health to remove
  @return health, current health
  */
-// included decrementHealth() not sure its created properly
+	// included decrementHealth() not sure its created properly
 int robot::decrementHealth(int amount){
     if ((health - amount) > 0) {
         while (amount > 0) {
@@ -74,7 +74,7 @@ int robot::decrementHealth(int amount){
         return health;
     }else{
         health = 0;
-        //		std::cout << "This robot is not feeling too good :( Health: " << health << std::endl;
+			//		std::cout << "This robot is not feeling too good :( Health: " << health << std::endl;
         return health;
     }
 }
@@ -98,8 +98,8 @@ int robot::getHealth(){
  @return true if sucessful, false if test conditions not meet and robot didnt turn
  */
 bool robot::rotate(_rotate turn){
-    //TODO why does this method require type _rotate and all
-    //other enums use the direction not _direction??
+		//TODO why does this method require type _rotate and all
+		//other enums use the direction not _direction??
     switch (turn) {
         case turnLeft:
             if (heading == North) {
@@ -178,11 +178,11 @@ std::string robot::toString(){
     a << "Robot status:"<<std::endl;
     a << "Health: " << health << std::endl << "Heading: " << toString(heading) << std::endl;
     
-    // report health and heading as a string
+		// report health and heading as a string
     return a.str();
 }
 
-//Tile interface
+	//Tile interface
 bool robot::moveOneSpot(){
     if (currentTile->getTile(heading) != NULL) {
         currentTile->setVisitor(NULL);
@@ -219,8 +219,3 @@ bool robot::move(int steps){
     }
     return result;
 }
-
-
-
-
-

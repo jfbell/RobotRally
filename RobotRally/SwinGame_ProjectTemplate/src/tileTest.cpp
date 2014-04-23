@@ -222,9 +222,11 @@ void testTile::mainTileTest(){
 		if (i%10 == 0 && i != 0) { //step through 10 at a time
 			std::cout << "------------------------------------------"
 				<< i <<std::endl
-				<< "press the ""any"" key to continue" << std::endl;
+			<< "press the ""any"" key to continue" << std::endl << "press 's' to skip to the end" << std::endl;
+			
 
-			(void)std::cin.get(); // press the "any" key to continue
+			char s = std::cin.get(); // press the "any" key to continue
+									 //TODO implement a skip of this function
 		}
 	}
     
