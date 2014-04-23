@@ -80,6 +80,9 @@ void tile::setVisitor(robot* visitor){
 }
 std::string tile::toString(){
     std::strstream s;
+	
+	s << "Tile: " << this << std::endl;
+	
     if (_visitor != NULL) {
         s << "Tile full, robot " << _visitor << "visiting" << std::endl;
     }else{

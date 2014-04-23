@@ -20,6 +20,7 @@ class Game {
 	
 public:
 	Game (TileLoader* loader);
+	Game();
 	robot* Player();
 	std::vector<tile*>	getTiles();
 };

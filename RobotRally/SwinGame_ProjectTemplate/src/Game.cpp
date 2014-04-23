@@ -11,14 +11,23 @@
 Game::Game (TileLoader* loader){
 	
 }
+
+Game::Game (){
+	
+	tileSet = getTiles();
+
+	Player();
+	
+}
+
 robot* Game::Player(){
-	robot();
+//	robot();
 	return new robot();
 }
+
 std::vector<tile*>	Game::getTiles(){
 
-	TileLoader tl =	*new TileLoader(); //when to delete this? is
-									   //it deleted because its made in a method
-	
+	TileLoader tl =	*new TileLoader(); //when to delete this?
+									   //is it deleted because its made in a method
 	return tl.getTiles();
 }

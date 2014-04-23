@@ -37,6 +37,7 @@
 		1A33A3BF18E66AE100076F3F /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		1A33A3C118E67B7200076F3F /* robotTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = robotTest.cpp; sourceTree = "<group>"; };
 		1A33A3C218E67B7200076F3F /* robotTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = robotTest.h; sourceTree = "<group>"; };
+		1A87B5271907D481000B81A2 /* TerminalColour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalColour.h; sourceTree = "<group>"; };
 		1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileLoader.cpp; sourceTree = "<group>"; };
 		1AC9EEDE18FBB00C003E8810 /* TileLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileLoader.h; sourceTree = "<group>"; };
 		1AC9EF0F18FCE964003E8810 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1A09312618E12BF300081E04 /* main.cpp */,
+				1A87B5271907D481000B81A2 /* TerminalColour.h */,
 				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
 				1AC9EF1018FCE964003E8810 /* Game.h */,
 				1A33A3BE18E66AE100076F3F /* Robot.cpp */,

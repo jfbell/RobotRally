@@ -9,7 +9,7 @@
 #include "tileTest.h"
 #include "Tile.h"
 #include "Robot.h"
-
+#include "TileLoader.h"
 
 #define NO_TILES 5
 
@@ -206,6 +206,33 @@ void testTile::mainTileTest(){
     testTileGetMethods();
     testTileSetMethods();
     testWhenRobotNull();
+	
+	
+		//Test Tile Loader
+	
+	TileLoader *tl = new TileLoader();
+	
+	std::vector<tile*> board = {};
+	
+	board = tl->getTiles();
+	
+	for (int i = 0; i < board.size(); i++) {
+		std::cout << board[i]->toString();
+		
+		if (i%10 == 0 && i != 0) { //step through 10 at a time
+			std::cout << "------------------------------------------"
+				<< i <<std::endl
+				<< "press the ""any"" key to continue" << std::endl;
+
+			(void)std::cin.get(); // press the "any" key to continue
+		}
+	}
+    
+	delete tl;
+	
+	for (int i = 0; i < board.size(); i++) {
+		delete board[i];
+	}
     
     
     

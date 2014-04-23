@@ -11,7 +11,8 @@
 //#include "SwinGame.h"
 #include "robotTest.h"
 #include "tileTest.h"
-
+#include "TileLoader.h"
+#include "TerminalColour.h"
 
 
 int main(void) //int argc, const char * argv[])
@@ -28,6 +29,6 @@ int main(void) //int argc, const char * argv[])
     t->mainTileTest();
     
     delete t;
-    
+	
     return 0;
 }
