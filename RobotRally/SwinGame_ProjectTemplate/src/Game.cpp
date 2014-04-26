@@ -38,35 +38,90 @@ int Game::GameMain(){
 	char input;
 	
 	while (input != '7' || 'q') {
+			//	introduction printed to terminal
+		cout << "----------------------------------" << endl;
+		cout << "Menu:" << endl;
+		cout << "1: Build Game" << endl;
+		cout << "2: Move Robot" << endl;
+		cout << "3: Turn Robot" << endl;
+		cout << "4: Execute a move sequence" << endl;
+		cout << "5: Print your Robots status" << endl;
+		cout << "6: Print the Board" << endl;
+		cout << "7: Exit" << endl;
+		cout << "----------------------------------" << endl;
 		
-		cout << "What now" << endl; 		//	introduction printed to terminal
+		cin.clear();
+		input = cin.get();
 		
-			//	request input (cin)
 		
 		switch (input) {
-			case '1':
-					//Build Game
-				break;
+			case '1':{
+				Game game = *new Game();
+				
+				break;}
 			case '2':
-					//Move n steps
+			{
+				cout << "How many steps? ";
+						cin.clear();
+				int n =	cin.get();
+				player->move(n);
+				cout << endl;
+				player->toString();
 				break;
+			}
 			case '3':
-					//rotate robot
+			{
+				cout << "Which why do you want to turn? (R, L, U) ";
+				char turn_c =	cin.get();
+				bool result = false;
+				switch (turn_c) {
+					case 'R':
+						result = player->rotate(turnRight);
+						break;
+					case 'L':
+						result = player->rotate(turnLeft);
+						break;
+					case 'U':
+						result = player->rotate(Uturn);
+						break;
+					default:
+						result = false;
+						break;
+				}
+				if (result) {
+					cout <<	"Turn was sucessful, now facing " << player->toString(player->getHeading()) << endl;
+				}else{
+					cout <<	"Turn failed, still facing" << player->toString(player->getHeading()) << endl;
+					cout << "check your input was one character ether R, L, or U." << endl;
+				}
+				
+				cout << endl;
+				player->toString();
+				cout << endl;
 				break;
-			case '4':
+			}
+			case '4':{
 					//move and rotate according to a sequence typ input, "1,3,N,2,-1"
-				break;
-			case '5':
-					//toString for robot
-				break;
-			case '6':
+				cout << "Coming soon to software near you!" << endl;
+				
+				break;}
+			case '5':{
+				cout << player->toString();
+				break;}
+			case '6':{
 					//show the board
-				break;
-			case '7':
-					//Exit
-				break;
-			default:
-				break;
+				for (int i = 0; i < tileSet.size(); i++) {
+					tileSet[i]->toString();
+					cout << "_____________________________" << endl;
+				}
+				break;}
+			case '7':{
+				cout << "Bye Bye"<< endl << endl ;
+				return 0;
+				break;}
+			default:{
+				cout << "invalid input" << endl;
+				break;}
 		}
 	}
 	return 0;

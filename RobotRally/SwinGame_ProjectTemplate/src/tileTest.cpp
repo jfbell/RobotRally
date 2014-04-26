@@ -227,6 +227,9 @@ void testTile::mainTileTest(){
 
 			char s = std::cin.get(); // press the "any" key to continue
 									 //TODO implement a skip of this function
+			if (s == 's') {
+				break;
+			}
 		}
 	}
     

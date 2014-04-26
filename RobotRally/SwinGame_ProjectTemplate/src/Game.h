@@ -15,10 +15,12 @@
 #include "TileLoader.h"
 
 class Game {
+	
+		
+public:
 	robot* player;
 	std::vector<tile*>	tileSet;
-	
-public:
+
 	Game (TileLoader* loader);
 	Game();
 	robot* Player();

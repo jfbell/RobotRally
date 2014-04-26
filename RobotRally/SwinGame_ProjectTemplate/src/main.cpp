@@ -18,24 +18,24 @@
 int main(void) //int argc, const char * argv[])
 {
     
-    robotTest *rt = new robotTest;
-    
-    rt->mainTest();
-    
-    delete rt;
-    
-    testTile *t = new testTile();
-    
-    t->mainTileTest();
-    
-    delete t;
+//    robotTest *rt = new robotTest;
+//    
+//    rt->mainTest();
+//    
+//    delete rt;
+//    
+//    testTile *t = new testTile();
+//    
+//    t->mainTileTest();
+//    
+//    delete t;
 	
 		//Game
 	
 	TileLoader *loader = new TileLoader();
 	
 	Game game = *new Game(loader);
-	
+
 	return game.GameMain();
 	
 	

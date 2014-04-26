@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A00D8D018F3AFDB001AA887 /* tileTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A00D8CE18F3AFDB001AA887 /* tileTest.cpp */; };
+		1A06AE8F190B966500277885 /* GameTesting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A06AE8D190B966500277885 /* GameTesting.cpp */; };
 		1A09314118E12BF400081E04 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A09312618E12BF300081E04 /* main.cpp */; };
 		1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3BE18E66AE100076F3F /* Robot.cpp */; };
 		1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3C118E67B7200076F3F /* robotTest.cpp */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		1A00D8CE18F3AFDB001AA887 /* tileTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tileTest.cpp; sourceTree = "<group>"; };
 		1A00D8CF18F3AFDB001AA887 /* tileTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tileTest.h; sourceTree = "<group>"; };
+		1A06AE8D190B966500277885 /* GameTesting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTesting.cpp; sourceTree = "<group>"; };
+		1A06AE8E190B966500277885 /* GameTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTesting.h; sourceTree = "<group>"; };
 		1A0930B618E12BB000081E04 /* RobotRally */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RobotRally; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A09312618E12BF300081E04 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1A33A3BE18E66AE100076F3F /* Robot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Robot.cpp; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				1A09312618E12BF300081E04 /* main.cpp */,
 				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
 				1AC9EF1018FCE964003E8810 /* Game.h */,
+				1A06AE8D190B966500277885 /* GameTesting.cpp */,
+				1A06AE8E190B966500277885 /* GameTesting.h */,
 				1A33A3BE18E66AE100076F3F /* Robot.cpp */,
 				1A33A3BF18E66AE100076F3F /* Robot.h */,
 				1A33A3C118E67B7200076F3F /* robotTest.cpp */,
@@ -152,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A06AE8F190B966500277885 /* GameTesting.cpp in Sources */,
 				1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */,
 				1A09314118E12BF400081E04 /* main.cpp in Sources */,
 				1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */,
