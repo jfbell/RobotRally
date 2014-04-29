@@ -18,7 +18,7 @@ class Game {
 	
 		
 public:
-	robot* player;
+	robot* _player;
 	std::vector<tile*>	tileSet;
 
 	Game (TileLoader* loader);

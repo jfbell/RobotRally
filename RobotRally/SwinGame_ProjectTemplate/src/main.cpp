@@ -24,20 +24,23 @@ int main(void) //int argc, const char * argv[])
 //    
 //    delete rt;
 //    
-//    testTile *t = new testTile();
-//    
-//    t->mainTileTest();
-//    
-//    delete t;
-	
-		//Game
-	
-	TileLoader *loader = new TileLoader();
-	
-	Game game = *new Game(loader);
 
-	return game.GameMain();
+		//Tile Testing
+	testTile *t = new testTile();
+    
+    t->mainTileTest();
+    
+    delete t;
+
 	
-	
-    return 0;
+//		//Game
+//	
+//	TileLoader *loader = new TileLoader();
+//	
+//	Game game = *new Game(loader);
+//
+//	return game.GameMain();
+
+    
+	return 0;
 }

@@ -18,6 +18,8 @@ class TileLoader {
 private:    
     std::vector<tile*> buildTiles();
     void connectTiles(std::vector<tile*> tileset);
+    void connectTiles(std::vector<tile*> tileset, _direction direction);
+	void connectTilesAsBoard(std::vector<tile*> tileset);
     _direction RandomDirection();
     bool connect2tiles(tile *A, tile *B, _direction dir);
     

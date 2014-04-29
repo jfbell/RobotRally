@@ -13,21 +13,21 @@ using namespace std;
 
 Game::Game (TileLoader* loader){
 	robot r = *new robot();
-	player = &r;
+	_player = &r;
 	
 	tileSet = loader->getTiles();
 }
 
 Game::Game (){
 	robot r = *new robot();
-	player = &r;
+	_player = &r;
 	
 	TileLoader tl =	*new TileLoader();
 	tileSet = tl.getTiles();
 }
 
 robot* Game::Player(){
-	return player;
+	return _player;
 }
 
 std::vector<tile*>	Game::getTiles(){
@@ -37,7 +37,17 @@ std::vector<tile*>	Game::getTiles(){
 int Game::GameMain(){
 	char input;
 	
-	while (input != '7' || 'q') {
+//	std::cout << "would you like to play? (Y/N)" << endl;
+//	input = cin.get();
+//	cin.clear();
+//	if (input == 'Y' || input == 'y') {
+//		Game game = *new Game();
+//		
+//	}else if(input == 'N' || input == 'n'){
+//		return 0;
+//	}
+	
+	do {
 			//	introduction printed to terminal
 		cout << "----------------------------------" << endl;
 		cout << "Menu:" << endl;
@@ -50,53 +60,57 @@ int Game::GameMain(){
 		cout << "7: Exit" << endl;
 		cout << "----------------------------------" << endl;
 		
-		cin.clear();
-		input = cin.get();
+			//
+		input = NULL;		//to clear the input
+		cin.clear();		//clear the cin buffer
+//		input = cin.get();	//set input to cin
+		cin >> input;
 		
 		
 		switch (input) {
 			case '1':{
 				Game game = *new Game();
-				
 				break;}
 			case '2':
 			{
 				cout << "How many steps? ";
 						cin.clear();
-				int n =	cin.get();
-				player->move(n);
+				int n =	0;
+				cin >> n;
+				_player->move(n);
 				cout << endl;
-				player->toString();
+				_player->toString();
 				break;
 			}
 			case '3':
 			{
 				cout << "Which why do you want to turn? (R, L, U) ";
-				char turn_c =	cin.get();
+				char turn_c;
+				cin >> turn_c;
 				bool result = false;
 				switch (turn_c) {
 					case 'R':
-						result = player->rotate(turnRight);
+						result = _player->rotate(turnRight);
 						break;
 					case 'L':
-						result = player->rotate(turnLeft);
+						result = _player->rotate(turnLeft);
 						break;
 					case 'U':
-						result = player->rotate(Uturn);
+						result = _player->rotate(Uturn);
 						break;
 					default:
 						result = false;
 						break;
 				}
 				if (result) {
-					cout <<	"Turn was sucessful, now facing " << player->toString(player->getHeading()) << endl;
+					cout <<	"Turn was sucessful, now facing " << _player->toString(_player->getHeading()) << endl;
 				}else{
-					cout <<	"Turn failed, still facing" << player->toString(player->getHeading()) << endl;
+					cout <<	"Turn failed, still facing" << _player->toString(_player->getHeading()) << endl;
 					cout << "check your input was one character ether R, L, or U." << endl;
 				}
 				
 				cout << endl;
-				player->toString();
+				_player->toString();
 				cout << endl;
 				break;
 			}
@@ -106,7 +120,7 @@ int Game::GameMain(){
 				
 				break;}
 			case '5':{
-				cout << player->toString();
+				cout << _player->toString();
 				break;}
 			case '6':{
 					//show the board
@@ -123,6 +137,6 @@ int Game::GameMain(){
 				cout << "invalid input" << endl;
 				break;}
 		}
-	}
+	} while (input != '7' || 'q');
 	return 0;
 }

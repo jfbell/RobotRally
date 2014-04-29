@@ -176,7 +176,8 @@ std::string robot::toString(_direction d)
 std::string robot::toString(){
     std::strstream a;
     a << "Robot status:"<<std::endl;
-    a << "Health: " << health << std::endl << "Heading: " << toString(heading) << std::endl;
+    a << "Health: " << health << std::endl;
+	a << "Heading: " << toString(heading) << std::endl;
     
 		// report health and heading as a string
     return a.str();

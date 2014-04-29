@@ -128,6 +128,7 @@ void testTile::testInvalidStepCount(){
 /**
  Tests an invalid move in a direction no tile is
  can be called from anytile*/
+
 void testTile::testInvalidDirection(){
     tile *currentTile = testRobot->getCurrentTile();
     int antiLoopCounter = 0;
@@ -219,9 +220,9 @@ void testTile::mainTileTest(){
 	for (int i = 0; i < board.size(); i++) {
 		std::cout << board[i]->toString();
 		
-		if (i%10 == 0 && i != 0) { //step through 10 at a time
-			std::cout << "------------------------------------------"
-				<< i <<std::endl
+		if ((i+1)%10 == 0 && i != 0) { //step through 10 at a time
+			std::cout << "------------------------------------------ "
+				<< i+1 <<std::endl
 			<< "press the ""any"" key to continue" << std::endl << "press 's' to skip to the end" << std::endl;
 			
 

@@ -151,6 +151,9 @@ std::string tile::toString(){
     }else{
         s << "West tile not connected" << std::endl;
     }
+	
+	s << std::endl;
+	
     return s.str();
 }
 
