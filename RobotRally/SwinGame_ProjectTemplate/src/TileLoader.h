@@ -20,12 +20,13 @@ private:
     void connectTiles(std::vector<tile*> tileset);
     void connectTiles(std::vector<tile*> tileset, _direction direction);
 	void connectTilesAsBoard(std::vector<tile*> tileset);
-    _direction RandomDirection();
+    
     bool connect2tiles(tile *A, tile *B, _direction dir);
     
 public:
     TileLoader();
     std::vector<tile*> getTiles();
+	_direction RandomDirection(); // made public to allow Card loader to use method
 };
 
 #endif /* defined(__RobotRally__TileLoader__) */

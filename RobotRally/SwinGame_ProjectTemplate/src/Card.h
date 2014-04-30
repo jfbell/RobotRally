@@ -15,7 +15,7 @@
 
 class Card {
 public:
-	virtual void ExecuteCard(robot* executeOn) = 0;
+	virtual void executeCard(robot* executeOn) = 0;
 	std::string toString();
 };
 

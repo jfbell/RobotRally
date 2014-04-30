@@ -12,10 +12,14 @@
 		1A09314118E12BF400081E04 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A09312618E12BF300081E04 /* main.cpp */; };
 		1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3BE18E66AE100076F3F /* Robot.cpp */; };
 		1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3C118E67B7200076F3F /* robotTest.cpp */; };
+		1AC2ED88191082D500379FDD /* Turn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2ED86191082D500379FDD /* Turn.cpp */; };
+		1AC2ED8B1910851A00379FDD /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2ED891910851A00379FDD /* Deck.cpp */; };
+		1AC2ED8E191086FC00379FDD /* CardLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2ED8C191086FC00379FDD /* CardLoader.cpp */; };
 		1AC9EEDF18FBB00C003E8810 /* TileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */; };
 		1AC9EF1118FCE964003E8810 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9EF0F18FCE964003E8810 /* Game.cpp */; };
 		1ACE735B18F156DA00A62190 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE735918F156DA00A62190 /* Tile.cpp */; };
 		1AEB9341190F6C5900B1C707 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB933F190F6C5900B1C707 /* Card.cpp */; };
+		1AEB9344190F6EB200B1C707 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB9342190F6EB200B1C707 /* Move.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +45,12 @@
 		1A33A3BF18E66AE100076F3F /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		1A33A3C118E67B7200076F3F /* robotTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = robotTest.cpp; sourceTree = "<group>"; };
 		1A33A3C218E67B7200076F3F /* robotTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = robotTest.h; sourceTree = "<group>"; };
+		1AC2ED86191082D500379FDD /* Turn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Turn.cpp; sourceTree = "<group>"; };
+		1AC2ED87191082D500379FDD /* Turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turn.h; sourceTree = "<group>"; };
+		1AC2ED891910851A00379FDD /* Deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Deck.cpp; sourceTree = "<group>"; };
+		1AC2ED8A1910851A00379FDD /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		1AC2ED8C191086FC00379FDD /* CardLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardLoader.cpp; sourceTree = "<group>"; };
+		1AC2ED8D191086FC00379FDD /* CardLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLoader.h; sourceTree = "<group>"; };
 		1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileLoader.cpp; sourceTree = "<group>"; };
 		1AC9EEDE18FBB00C003E8810 /* TileLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileLoader.h; sourceTree = "<group>"; };
 		1AC9EF0F18FCE964003E8810 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		1ACE735A18F156DA00A62190 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		1AEB933F190F6C5900B1C707 /* Card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Card.cpp; sourceTree = "<group>"; };
 		1AEB9340190F6C5900B1C707 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		1AEB9342190F6EB200B1C707 /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
+		1AEB9343190F6EB200B1C707 /* Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,23 +101,31 @@
 		1A09312518E12BF300081E04 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1A09312618E12BF300081E04 /* main.cpp */,
-				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
-				1AC9EF1018FCE964003E8810 /* Game.h */,
 				1AEB933F190F6C5900B1C707 /* Card.cpp */,
-				1AEB9340190F6C5900B1C707 /* Card.h */,
+				1AC2ED8C191086FC00379FDD /* CardLoader.cpp */,
+				1AC2ED891910851A00379FDD /* Deck.cpp */,
+				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
 				1A06AE8D190B966500277885 /* GameTesting.cpp */,
-				1A06AE8E190B966500277885 /* GameTesting.h */,
+				1A09312618E12BF300081E04 /* main.cpp */,
+				1AEB9342190F6EB200B1C707 /* Move.cpp */,
 				1A33A3BE18E66AE100076F3F /* Robot.cpp */,
-				1A33A3BF18E66AE100076F3F /* Robot.h */,
 				1A33A3C118E67B7200076F3F /* robotTest.cpp */,
-				1A33A3C218E67B7200076F3F /* robotTest.h */,
 				1ACE735918F156DA00A62190 /* Tile.cpp */,
-				1ACE735A18F156DA00A62190 /* Tile.h */,
 				1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */,
-				1AC9EEDE18FBB00C003E8810 /* TileLoader.h */,
 				1A00D8CE18F3AFDB001AA887 /* tileTest.cpp */,
+				1AC2ED86191082D500379FDD /* Turn.cpp */,
+				1AEB9340190F6C5900B1C707 /* Card.h */,
+				1AC2ED8D191086FC00379FDD /* CardLoader.h */,
+				1AC2ED8A1910851A00379FDD /* Deck.h */,
+				1AC9EF1018FCE964003E8810 /* Game.h */,
+				1A06AE8E190B966500277885 /* GameTesting.h */,
+				1AEB9343190F6EB200B1C707 /* Move.h */,
+				1A33A3BF18E66AE100076F3F /* Robot.h */,
+				1A33A3C218E67B7200076F3F /* robotTest.h */,
+				1ACE735A18F156DA00A62190 /* Tile.h */,
+				1AC9EEDE18FBB00C003E8810 /* TileLoader.h */,
 				1A00D8CF18F3AFDB001AA887 /* tileTest.h */,
+				1AC2ED87191082D500379FDD /* Turn.h */,
 			);
 			name = src;
 			path = SwinGame_ProjectTemplate/src;
@@ -162,10 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC2ED8B1910851A00379FDD /* Deck.cpp in Sources */,
 				1A06AE8F190B966500277885 /* GameTesting.cpp in Sources */,
 				1A33A3C318E67B7200076F3F /* robotTest.cpp in Sources */,
+				1AC2ED88191082D500379FDD /* Turn.cpp in Sources */,
 				1A09314118E12BF400081E04 /* main.cpp in Sources */,
 				1A33A3C018E66AE100076F3F /* Robot.cpp in Sources */,
+				1AEB9344190F6EB200B1C707 /* Move.cpp in Sources */,
+				1AC2ED8E191086FC00379FDD /* CardLoader.cpp in Sources */,
 				1A00D8D018F3AFDB001AA887 /* tileTest.cpp in Sources */,
 				1AC9EEDF18FBB00C003E8810 /* TileLoader.cpp in Sources */,
 				1ACE735B18F156DA00A62190 /* Tile.cpp in Sources */,
