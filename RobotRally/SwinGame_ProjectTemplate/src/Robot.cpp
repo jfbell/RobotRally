@@ -186,10 +186,14 @@ std::string robot::toString(){
 	//Tile interface
 bool robot::moveOneSpot(){
     if (currentTile->getTile(heading) != NULL) {
-        currentTile->setVisitor(NULL);
-        setCurrentTile(currentTile->getTile(heading));
-        currentTile->setVisitor(this);
-        return true;
+        
+		currentTile->setVisitor(NULL);
+        
+		setCurrentTile(currentTile->getTile(heading));
+        
+		currentTile->setVisitor(this);
+        
+		return true;
     }else{
         return false;
     }

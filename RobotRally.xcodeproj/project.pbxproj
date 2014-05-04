@@ -101,30 +101,30 @@
 		1A09312518E12BF300081E04 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1AEB933F190F6C5900B1C707 /* Card.cpp */,
-				1AC2ED8C191086FC00379FDD /* CardLoader.cpp */,
-				1AC2ED891910851A00379FDD /* Deck.cpp */,
-				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
-				1A06AE8D190B966500277885 /* GameTesting.cpp */,
 				1A09312618E12BF300081E04 /* main.cpp */,
-				1AEB9342190F6EB200B1C707 /* Move.cpp */,
-				1A33A3BE18E66AE100076F3F /* Robot.cpp */,
-				1A33A3C118E67B7200076F3F /* robotTest.cpp */,
-				1ACE735918F156DA00A62190 /* Tile.cpp */,
-				1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */,
-				1A00D8CE18F3AFDB001AA887 /* tileTest.cpp */,
-				1AC2ED86191082D500379FDD /* Turn.cpp */,
+				1AEB933F190F6C5900B1C707 /* Card.cpp */,
 				1AEB9340190F6C5900B1C707 /* Card.h */,
+				1AC2ED8C191086FC00379FDD /* CardLoader.cpp */,
 				1AC2ED8D191086FC00379FDD /* CardLoader.h */,
+				1AC2ED891910851A00379FDD /* Deck.cpp */,
 				1AC2ED8A1910851A00379FDD /* Deck.h */,
+				1AC9EF0F18FCE964003E8810 /* Game.cpp */,
 				1AC9EF1018FCE964003E8810 /* Game.h */,
+				1A06AE8D190B966500277885 /* GameTesting.cpp */,
 				1A06AE8E190B966500277885 /* GameTesting.h */,
+				1AEB9342190F6EB200B1C707 /* Move.cpp */,
 				1AEB9343190F6EB200B1C707 /* Move.h */,
+				1A33A3BE18E66AE100076F3F /* Robot.cpp */,
 				1A33A3BF18E66AE100076F3F /* Robot.h */,
+				1A33A3C118E67B7200076F3F /* robotTest.cpp */,
 				1A33A3C218E67B7200076F3F /* robotTest.h */,
+				1ACE735918F156DA00A62190 /* Tile.cpp */,
 				1ACE735A18F156DA00A62190 /* Tile.h */,
+				1AC9EEDD18FBB00C003E8810 /* TileLoader.cpp */,
 				1AC9EEDE18FBB00C003E8810 /* TileLoader.h */,
+				1A00D8CE18F3AFDB001AA887 /* tileTest.cpp */,
 				1A00D8CF18F3AFDB001AA887 /* tileTest.h */,
+				1AC2ED86191082D500379FDD /* Turn.cpp */,
 				1AC2ED87191082D500379FDD /* Turn.h */,
 			);
 			name = src;
@@ -277,12 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/godly/mac",
-					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/mac",
-					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/sdl13/mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -292,12 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/godly/mac",
-					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/mac",
-					"$(PROJECT_DIR)/RobotRally/SwinGame_ProjectTemplate/lib/sdl13/mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
