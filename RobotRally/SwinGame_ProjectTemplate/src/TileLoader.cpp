@@ -21,35 +21,66 @@ TileLoader::TileLoader(){
 
 std::vector<tile*> TileLoader::buildTiles(){
     
-    std::vector<tile*> board = {};
+    std::vector<tile*> board;
     
     for (int i = 0 ; i < NO_TILES; i++) {
-        
-        board.push_back(new tile);// = new tile;
-    }
+		
+
+        board.push_back(( new tile(i) ));// = new tile;
+    
+	}
     return board;
 }
 
-bool TileLoader::connect2tiles(tile *A, tile *B, _direction dir){
+bool TileLoader::connect2tiles(tile *from, tile *to, _direction dir){
     switch (dir) {
         case North:
-            A->setTile(B, North);
-            B->setTile(A, South);
+            from->setTile(to, North);
+            to->setTile(from, South);
             return true;
             break;
         case South:
-            A->setTile(B, South);
-            B->setTile(A, North);
+            from->setTile(to, South);
+            to->setTile(from, North);
             return true;
             break;
         case East:
-            A->setTile(B, East);
-            B->setTile(A, West);
+            from->setTile(to, East);
+            to->setTile(from, West);
             return true;
             break;
         case West:
-            A->setTile(B, West);
-            B->setTile(A, East);
+            from->setTile(to, West);
+            to->setTile(from, East);
+            return true;
+            break;
+        default:
+            return false;
+            break;
+    }
+    
+}
+
+bool TileLoader::disconnect2tiles(tile *from, tile *to, _direction dir){
+    switch (dir) {
+        case North:
+            from->setTile(NULL, North);
+            to->setTile(NULL, South);
+            return true;
+            break;
+        case South:
+            from->setTile(NULL, South);
+            to->setTile(NULL, North);
+            return true;
+            break;
+        case East:
+            from->setTile(NULL, East);
+            to->setTile(NULL, West);
+            return true;
+            break;
+        case West:
+            from->setTile(NULL, West);
+            to->setTile(NULL, East);
             return true;
             break;
         default:
@@ -150,31 +181,30 @@ void TileLoader::connectTiles(std::vector<tile*> tileset, _direction dir){
 void TileLoader::connectTilesAsBoard(std::vector<tile*> tileset){
 		//	int x_dimension = 12;
 		//	int y_dimension = 12;
-	
 		//todo to many magic numbers
 		//todo not sure this is yet working
-	
-	
-	connectTiles(tileset, East);
-	
-	for (int i = 0; i < tileset.size(); i += 12) {
+
+	connectTiles( tileset , East );
+
+	for (int m = 0; m < 12; m++) { //Collum
 		
-			//break link
-		tileset[i]->setTile(NULL, West);
-		
-		if (i+12 < 144) {
-			tileset[i+12]->setTile(NULL, East);
-			
-				//connect board row below
-			for (int j = 0 ; j < 12; j++) {
-				
-				connect2tiles(tileset[i+j], tileset[i+12+j], South);
-//				std::cout << tileset[i+j]->toString() << std::endl;
-//				std::cout << tileset[i+12+j]->toString() << std::endl;
-			}
+		for (int n = 1 ; n < 12 ; n++) { //Row
+			connect2tiles(tileset[(12*(n-1) + m)] , tileset[ 12*n + m], South);
 		}
 	}
+	
+	for (int n = 1 ; n < 12 ; n++) { //Row
+		disconnect2tiles(tileset[ 12 * n - 1 ] , tileset[ 12 * n ], East);
+	}
+	
 /*
+ 
+		N
+
+	W		E
+ 
+		S
+ 
 	0	1	2	3	4	5	6	7	8	9	10	11
 	12	13	14	15	16	17	18	19	20	21	22	23
 	24	25	26	27	28	29	30	31	32	33	34	35
@@ -189,6 +219,8 @@ void TileLoader::connectTilesAsBoard(std::vector<tile*> tileset){
 	132	133	134	135	136	137	138	139	140	141	142	143
 */
 }
+
+
 std::vector<tile*> TileLoader::getTiles(){
 	
 	std::vector<tile*> board = buildTiles();

@@ -12,18 +12,22 @@ using namespace std;
 
 
 Game::Game (TileLoader* loader){
-	robot r = *new robot();
+	robot r = *new robot(South);
 	_player = &r;
 	
 	tileSet = loader->getTiles();
 }
 
 Game::Game (){
-	robot r = *new robot();
-	_player = &r;
+	robot r = *new robot(South);
 	
 	TileLoader tl =	*new TileLoader();
 	tileSet = tl.getTiles();
+
+	tile* startTile = tileSet[0];
+	
+	r.setCurrentTile(startTile);
+	_player = &r;
 }
 
 robot* Game::Player(){
@@ -47,6 +51,9 @@ int Game::GameMain(){
 //		return 0;
 //	}
 	
+	Game g = *this;
+	robot p = *this->Player();
+	
 	do {
 			//	introduction printed to terminal
 		cout << "----------------------------------" << endl;
@@ -69,7 +76,9 @@ int Game::GameMain(){
 		
 		switch (input) {
 			case '1':{
-				Game game = *new Game();
+				g = *new Game();
+				p = *g.Player(); // this seems recursive like im adding another game for no reason instead of using "this"
+				
 				break;}
 			case '2':
 			{
@@ -77,9 +86,11 @@ int Game::GameMain(){
 						cin.clear();
 				int n =	0;
 				cin >> n;
-				_player->move(n);
+				p.move(n);
+				
+					//_player->move(n);
 				cout << endl;
-				_player->toString();
+				cout << p.toString();
 				break;
 			}
 			case '3':
@@ -90,44 +101,82 @@ int Game::GameMain(){
 				bool result = false;
 				switch (turn_c) {
 					case 'R':
-						result = _player->rotate(turnRight);
+						result = p.rotate(turnRight);
 						break;
 					case 'L':
-						result = _player->rotate(turnLeft);
+						result = p.rotate(turnLeft);
 						break;
 					case 'U':
-						result = _player->rotate(Uturn);
+						result = p.rotate(Uturn);
 						break;
 					default:
 						result = false;
 						break;
 				}
 				if (result) {
-					cout <<	"Turn was sucessful, now facing " << _player->toString(_player->getHeading()) << endl;
+					cout <<	"Turn was sucessful, now facing " << p.
+					toString(p.getHeading()) << endl;
 				}else{
-					cout <<	"Turn failed, still facing" << _player->toString(_player->getHeading()) << endl;
+					cout <<	"Turn failed, still facing" << p.toString(p.getHeading()) << endl;
 					cout << "check your input was one character ether R, L, or U." << endl;
 				}
 				
 				cout << endl;
-				_player->toString();
+				p.toString();
 				cout << endl;
 				break;
 			}
 			case '4':{
 					//move and rotate according to a sequence typ input, "1,3,N,2,-1"
 				cout << "Coming soon to software near you!" << endl;
+//TODO
+//				cout << "Input instruction string directions N, S, E or W or moves -9 to 0 to 9 moves " << endl;
+//				vector<char> instruct[] = {};
+//				cin >> instruct;
+				
 				
 				break;}
 			case '5':{
-				cout << _player->toString();
+				cout << p.toString();
 				break;}
 			case '6':{
-					//show the board
+					//TODO show the board
 				for (int i = 0; i < tileSet.size(); i++) {
-					tileSet[i]->toString();
-					cout << "_____________________________" << endl;
+					cout << tileSet[i]->toString();
 				}
+			/*
+				robot MappingRobot = *new robot(East);
+				
+				MappingRobot.setCurrentTile(tileSet[0]);
+				
+				tile currentTile;
+				_direction heading;
+				
+				do {
+					currentTile = *MappingRobot.getCurrentTile();
+					heading = MappingRobot.getHeading();
+					
+					MappingRobot.move(1);
+					
+					if (heading == East){
+						cout << "[x]";
+					}
+					
+					if (currentTile.getTile(heading) == NULL ) {
+						if (heading == East) {
+							MappingRobot.rotate(Uturn);
+//							MappingRobot.move(1);
+//							MappingRobot.rotate(turnRight);
+						}else if (heading == West){
+							MappingRobot.rotate(turnLeft);
+							MappingRobot.move(1);
+							MappingRobot.rotate(turnLeft);
+						}
+					}
+
+				} while (currentTile.getTile(East) != NULL && currentTile.getTile(South) != NULL);
+			*/
+				
 				break;}
 			case '7':{
 				cout << "Bye Bye"<< endl << endl ;

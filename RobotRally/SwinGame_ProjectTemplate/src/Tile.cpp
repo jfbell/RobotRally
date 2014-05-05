@@ -22,6 +22,23 @@ tile::tile(){
 	
 	use_connections = false;
 }
+
+tile::tile(int ID){
+	
+	tileID = ID;
+	
+    _visitor = NULL;
+    
+    northTile = NULL;
+    southTile = NULL;
+    eastTile = NULL;
+    westTile = NULL;
+	
+	connections = { NULL, NULL, NULL, NULL };
+	
+	use_connections = false;
+}
+
 tile::tile(robot* visitor){
     _visitor = visitor;
     
@@ -107,8 +124,8 @@ void tile::setTile( tile* aTile, _direction position){
 			break;
     }
 }
-void tile::setVisitor(robot* visitor){
-    _visitor = visitor;
+void tile::setVisitor(robot* guest){
+    _visitor = guest;
 }
 std::string tile::toString(){
     std::strstream s;
@@ -120,10 +137,10 @@ std::string tile::toString(){
 		westTile = connections[West];
 	}
 	
-	s << "Tile: " << this << std::endl;
+	s << "Tile: " << this << "\t TileID: ["<< tileID << "]"<< std::endl;
 	
     if (_visitor != NULL) {
-        s << "Tile full, robot " << _visitor << "visiting" << std::endl;
+        s << "Tile full, robot " << _visitor << " visiting" << std::endl;
     }else{
         s << "Tile is empty" << std::endl;
     }

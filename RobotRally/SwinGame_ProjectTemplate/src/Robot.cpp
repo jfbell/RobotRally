@@ -175,17 +175,22 @@ std::string robot::toString(_direction d)
  */
 std::string robot::toString(){
     std::strstream a;
-    a << "Robot status:"<<std::endl;
-    a << "Health: " << health << std::endl;
-	a << "Heading: " << toString(heading) << std::endl;
-    
+    a << "Robot " << this << " status:"<<std::endl;
+    a << "\tHealth: " << health << std::endl;
+	a << "\tHeading: " << toString(heading) << std::endl;
+	if (currentTile != NULL) {
+		a << "\tCurrent Tile: \n" << currentTile->toString() << std::endl;
+    }else{
+		a << "\tCurrent Tile: " << "NULL" << std::endl;
+	}
 		// report health and heading as a string
     return a.str();
 }
 
 	//Tile interface
 bool robot::moveOneSpot(){
-    if (currentTile->getTile(heading) != NULL) {
+   
+	if (currentTile->getTile(heading) != NULL) {
         
 		currentTile->setVisitor(NULL);
         
@@ -222,5 +227,8 @@ bool robot::move(int steps){
         }
         result = rotate(Uturn);
     }
+	if (result == false) {
+		std::cout << "No tile infront turn befor trying to move again" << std::endl;
+	}
     return result;
 }

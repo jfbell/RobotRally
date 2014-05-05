@@ -21,7 +21,8 @@ private:
     void connectTiles(std::vector<tile*> tileset, _direction direction);
 	void connectTilesAsBoard(std::vector<tile*> tileset);
     
-    bool connect2tiles(tile *A, tile *B, _direction dir);
+    bool connect2tiles(tile *from, tile *to, _direction dir);
+	bool disconnect2tiles(tile *from, tile *to, _direction dir);
     
 public:
     TileLoader();

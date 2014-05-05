@@ -21,7 +21,7 @@ public:
 	robot* _player;
 	std::vector<tile*>	tileSet;
 
-	Game (TileLoader* loader);
+	Game(TileLoader* loader);
 	Game();
 	robot* Player();
 	std::vector<tile*>	getTiles();

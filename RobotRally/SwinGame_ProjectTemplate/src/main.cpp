@@ -8,31 +8,30 @@
 
 #include <iostream>
 #include <stdio.h>
-	//#include "SwinGame.h"
 #include "robotTest.h"
 #include "tileTest.h"
 #include "TileLoader.h"
 #include "Game.h"
 
 
-int main(void) //int argc, const char * argv[])
+int main(void)
 {
     
-//    robotTest *rt = new robotTest;
-//    
-//    rt->mainTest();
-//    
-//    delete rt;
-//    
-//
-//		//Tile Testing
-//	testTile *t = new testTile();
-//    
-//    t->mainTileTest();
-//    
-//    delete t;
-//
-//	
+    robotTest *rt = new robotTest;
+    
+    rt->mainTest();
+    
+    delete rt;
+    
+
+		//Tile Testing
+	testTile *t = new testTile();
+    
+    t->mainTileTest();
+    
+    delete t;
+
+	
 		//Game
 	
 	TileLoader *loader = new TileLoader();

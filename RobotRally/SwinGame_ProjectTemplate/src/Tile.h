@@ -16,6 +16,8 @@
 
 class tile {
 private:
+	int tileID;
+	
     robot* _visitor;
     
     tile* northTile;
@@ -30,6 +32,7 @@ private:
 public:
 		//constructor
     tile();
+	tile(int ID);
     tile(robot* visitor);
     
 		//methods
@@ -37,7 +40,7 @@ public:
     robot* getVisitor();
     bool removeRobot(robot* aVisitor);
     void setTile ( tile* aTile, _direction position);
-    void setVisitor(robot* visitor);
+    void setVisitor(robot* guest);
     std::string toString();
 	
 	void use_connections_vector();
