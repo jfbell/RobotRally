@@ -23,7 +23,7 @@ Game::Game (){
 	
 	TileLoader tl =	*new TileLoader();
 	tileSet = tl.getTiles();
-
+	
 	tile* startTile = tileSet[0];
 	
 	r.setCurrentTile(startTile);
@@ -41,15 +41,15 @@ std::vector<tile*>	Game::getTiles(){
 int Game::GameMain(){
 	char input;
 	
-//	std::cout << "would you like to play? (Y/N)" << endl;
-//	input = cin.get();
-//	cin.clear();
-//	if (input == 'Y' || input == 'y') {
-//		Game game = *new Game();
-//		
-//	}else if(input == 'N' || input == 'n'){
-//		return 0;
-//	}
+		//	std::cout << "would you like to play? (Y/N)" << endl;
+		//	input = cin.get();
+		//	cin.clear();
+		//	if (input == 'Y' || input == 'y') {
+		//		Game game = *new Game();
+		//
+		//	}else if(input == 'N' || input == 'n'){
+		//		return 0;
+		//	}
 	
 	Game g = *this;
 	robot p = *this->Player();
@@ -70,7 +70,7 @@ int Game::GameMain(){
 			//
 		input = NULL;		//to clear the input
 		cin.clear();		//clear the cin buffer
-//		input = cin.get();	//set input to cin
+							//		input = cin.get();	//set input to cin
 		cin >> input;
 		
 		
@@ -83,7 +83,7 @@ int Game::GameMain(){
 			case '2':
 			{
 				cout << "How many steps? ";
-						cin.clear();
+				cin.clear();
 				int n =	0;
 				cin >> n;
 				p.move(n);
@@ -129,10 +129,55 @@ int Game::GameMain(){
 			case '4':{
 					//move and rotate according to a sequence typ input, "1,3,N,2,-1"
 				cout << "Coming soon to software near you!" << endl;
-//TODO
-//				cout << "Input instruction string directions N, S, E or W or moves -9 to 0 to 9 moves " << endl;
-//				vector<char> instruct[] = {};
-//				cin >> instruct;
+					//TODO
+				cout << "Input instruction string directions N, S, E or W or moves -9 to 0 to 9 moves " << endl;
+				
+				string s;
+				std::getline (std::cin,s);
+				
+				do {
+					
+					int comma = s.find(',');
+					
+					char command[20];
+					size_t length = s.copy( command , 0 , comma);
+					
+					command[length] = '\0';
+				
+					switch (command[]) {
+						case 'L':
+							;
+							break;
+						case 'l':
+							<#statements#>
+							break;
+						case 'R':
+							<#statements#>
+							break;
+						case 'r':
+							<#statements#>
+							break;
+						case 'U':
+							<#statements#>
+							break;
+						case 'u':
+							<#statements#>
+							break;
+						case '':
+							<#statements#>
+							break;
+						case 'L':
+							<#statements#>
+							break;
+							
+						default:
+							break;
+							
+							cout << s << endl; // TODO remove after testing complete
+							
+							s.erase ( s.begin() , s.begin() + comma );
+					}
+				} while (!s.empty());
 				
 				
 				break;}
@@ -144,38 +189,38 @@ int Game::GameMain(){
 				for (int i = 0; i < tileSet.size(); i++) {
 					cout << tileSet[i]->toString();
 				}
-			/*
-				robot MappingRobot = *new robot(East);
-				
-				MappingRobot.setCurrentTile(tileSet[0]);
-				
-				tile currentTile;
-				_direction heading;
-				
-				do {
-					currentTile = *MappingRobot.getCurrentTile();
-					heading = MappingRobot.getHeading();
-					
-					MappingRobot.move(1);
-					
-					if (heading == East){
-						cout << "[x]";
-					}
-					
-					if (currentTile.getTile(heading) == NULL ) {
-						if (heading == East) {
-							MappingRobot.rotate(Uturn);
-//							MappingRobot.move(1);
-//							MappingRobot.rotate(turnRight);
-						}else if (heading == West){
-							MappingRobot.rotate(turnLeft);
-							MappingRobot.move(1);
-							MappingRobot.rotate(turnLeft);
-						}
-					}
-
-				} while (currentTile.getTile(East) != NULL && currentTile.getTile(South) != NULL);
-			*/
+				/*
+				 robot MappingRobot = *new robot(East);
+				 
+				 MappingRobot.setCurrentTile(tileSet[0]);
+				 
+				 tile currentTile;
+				 _direction heading;
+				 
+				 do {
+				 currentTile = *MappingRobot.getCurrentTile();
+				 heading = MappingRobot.getHeading();
+				 
+				 MappingRobot.move(1);
+				 
+				 if (heading == East){
+				 cout << "[x]";
+				 }
+				 
+				 if (currentTile.getTile(heading) == NULL ) {
+				 if (heading == East) {
+				 MappingRobot.rotate(Uturn);
+				 //							MappingRobot.move(1);
+				 //							MappingRobot.rotate(turnRight);
+				 }else if (heading == West){
+				 MappingRobot.rotate(turnLeft);
+				 MappingRobot.move(1);
+				 MappingRobot.rotate(turnLeft);
+				 }
+				 }
+				 
+				 } while (currentTile.getTile(East) != NULL && currentTile.getTile(South) != NULL);
+				 */
 				
 				break;}
 			case '7':{

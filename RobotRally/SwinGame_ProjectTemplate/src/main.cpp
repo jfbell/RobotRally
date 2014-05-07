@@ -12,34 +12,34 @@
 #include "tileTest.h"
 #include "TileLoader.h"
 #include "Game.h"
+#include <string>
 
+using namespace std;
 
 int main(void)
 {
-    
     robotTest *rt = new robotTest;
-    
+	
     rt->mainTest();
-    
+	
     delete rt;
-    
-
+	
+	
 		//Tile Testing
 	testTile *t = new testTile();
-    
+	
     t->mainTileTest();
-    
+	
     delete t;
-
+	
 	
 		//Game
 	
 	TileLoader *loader = new TileLoader();
 	
 	Game game = *new Game(loader);
-
+	
 	return game.GameMain();
-
-    
+	
 	return 0;
 }
