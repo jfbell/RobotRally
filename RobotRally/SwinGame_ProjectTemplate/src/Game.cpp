@@ -129,7 +129,7 @@ int Game::GameMain(){
 			case '4':{
 					//move and rotate according to a sequence typ input, "1,3,N,2,-1"
 				cout << "Coming soon to software near you!" << endl;
-					//TODO
+				/*	//TODO
 				cout << "Input instruction string directions N, S, E or W or moves -9 to 0 to 9 moves " << endl;
 				
 				string s;
@@ -179,6 +179,7 @@ int Game::GameMain(){
 					}
 				} while (!s.empty());
 				
+				*/
 				
 				break;}
 			case '5':{
