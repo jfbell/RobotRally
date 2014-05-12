@@ -13,9 +13,12 @@
 #include "Robot.h"
 #include "Tile.h"
 #include "TileLoader.h"
+#include "Deck.h"
+
 
 class Game {
-	
+private:
+	Deck* _gameDeck;
 		
 public:
 	robot* _player;
