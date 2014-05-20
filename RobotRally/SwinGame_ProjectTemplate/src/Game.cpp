@@ -27,8 +27,8 @@ Game::Game (){
 	TileLoader tl =	*new TileLoader();
 	tileSet = tl.getTiles();
 	
-	tile* startTile = tileSet[0];
-	
+	startTile = tileSet[0];
+	r.setStartTile(startTile);
 	r.setCurrentTile(startTile);
 	_player = &r;
 }

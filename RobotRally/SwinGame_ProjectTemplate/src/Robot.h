@@ -33,6 +33,7 @@ private:
     int health;                 //health can be a value between 0 and 6 only
     _direction heading;          //direction defined by direction  enum _direction
     tile* currentTile;
+    tile* startTile;
     
 		//    private methods
     bool decrementHealth();
@@ -63,6 +64,9 @@ public:
     tile* getCurrentTile();
 		//    void move(int steps);
     bool move(int steps);
+
+    void setStartTile(tile* tile);
+	void goToStart();
 };
 
 

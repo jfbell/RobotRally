@@ -180,3 +180,6 @@ void tile::use_connections_vector(){
 void tile::do_not_use_connections_vector(){
 	use_connections = false;
 }
+
+bool Invoke()
+{ return true; }

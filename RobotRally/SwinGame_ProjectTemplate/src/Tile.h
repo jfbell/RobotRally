@@ -46,6 +46,8 @@ public:
 	void use_connections_vector();
 	void do_not_use_connections_vector();
     
+	bool Invoke();
+	
 };
 
 #endif /* defined(__RobotRally__Tile__) */

@@ -19,6 +19,8 @@
 class Game {
 private:
 	Deck* _gameDeck;
+	
+	tile* startTile;
 		
 public:
 	robot* _player;

@@ -230,5 +230,22 @@ bool robot::move(int steps){
 	if (result == false) {
 		std::cout << "No tile infront turn befor trying to move again" << std::endl;
 	}
+	
+		//Invoke the Tile if it has anything to do
+	
+	
     return result;
+}
+
+void robot::setStartTile(tile* tile){
+     startTile = tile;
+	
+}
+
+void robot::goToStart(){
+	currentTile->setVisitor(NULL);
+	
+	setCurrentTile(startTile);
+	
+	startTile->setVisitor(this);
 }
