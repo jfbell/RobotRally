@@ -12,11 +12,9 @@
 #include <iostream>
 #include "Tile.h"
 
-
-class pit : public tile
-{
+class Pit : public tile {
 public:
-	pit();
+	Pit();
 	bool Invoke();
 };
 

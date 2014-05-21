@@ -7,3 +7,15 @@
 //
 
 #include "Teleport.h"
+#include "TileLoader.h"
+#include "Tile.h"
+#include "Robot.h"
+
+
+Teleport::Teleport() {
+	
+}
+void Teleport::Invoke(){
+	robot r = *this->getVisitor();
+	
+}

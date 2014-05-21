@@ -9,11 +9,11 @@
 #include "Pit.h"
 #include "Robot.h"
 
-pit::pit(){
+Pit::Pit(){
 	
 }
 
-bool pit::Invoke(){
+bool Pit::Invoke(){
 	robot r = *this->getVisitor();
 	r.decrementHealth(1);
 	r.goToStart();

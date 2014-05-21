@@ -13,10 +13,10 @@
 #include "Tile.h"
 
 class Teleport : public tile {
-	<#instance variables#>
 	
 public:
-	<#member functions#>
+	Teleport();
+	void Invoke();
 };
 
 #endif /* defined(__RobotRally__Teleport__) */
