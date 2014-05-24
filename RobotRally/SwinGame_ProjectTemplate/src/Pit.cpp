@@ -8,6 +8,8 @@
 
 #include "Pit.h"
 #include "Robot.h"
+#include <strstream>
+
 
 Pit::Pit(){
 	

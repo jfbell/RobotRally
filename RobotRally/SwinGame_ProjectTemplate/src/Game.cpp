@@ -106,13 +106,12 @@ int Game::GameMain(){
 			}
 			case '4':{
 				cout << p.toString();
-				cout << p.getCurrentTile()->toString();
+					//cout << p.getCurrentTile()->toString();
 				break;
 			}
 				
 			case '5':{
-				tile t = *p.getCurrentTile();
-				t.Invoke();
+				p.getCurrentTile()->Invoke();
 				break;}
 				
 			case '6':{

@@ -18,6 +18,9 @@ public:
 	pivot();
 	pivot(int Index);
 	void Invoke();
+	
+	std::string toString();
+
 };
 
 #endif /* defined(__RobotRally__pivot__) */

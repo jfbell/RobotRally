@@ -18,6 +18,9 @@ public:
 	Pit(int Index);
 	
 	bool Invoke();
+	
+	std::string toString();
+
 };
 
 #endif /* defined(__RobotRally__Pit__) */

@@ -21,6 +21,9 @@ public:
 	void Invoke();
 	_direction RandomDirection();
 	
+	std::string toString();
+
+	
 };
 
 #endif /* defined(__RobotRally__Teleport__) */

@@ -9,6 +9,10 @@
 #include "Tile.h"
 #include <strstream>
 
+#include "pivot.h"
+#include "Pit.h"
+#include "Teleport.h"
+
 	//constructor
 tile::tile(){
     _visitor = NULL;
@@ -139,6 +143,21 @@ std::string tile::toString(){
 	
 	s << "Tile: " << this << "\t TileID: ["<< tileID << "]"<< std::endl;
 	
+	s << "Tile type: ";
+	s << "Normal" << std::endl;
+
+		
+//	} else	if ( dynamic_cast<Pit*>(this)) {
+//		s << "Pit" << std::endl;
+//	} else	if ( dynamic_cast<pivot*>(this)) {
+//		s << "Pivot" << std::endl;
+//	} else	if ( dynamic_cast<Teleport*>(this)) {
+//		s << "Teleport" << std::endl;
+//	} else {
+//		s << "No type found? " << std::endl;
+//	(void)std::cin;
+//	}
+	
     if (_visitor != NULL) {
         s << "Tile full, robot " << _visitor << " visiting" << std::endl;
     }else{
@@ -185,5 +204,6 @@ void tile::setTileID(int ID){
 	tileID = ID;
 }
 
-void Invoke()
-{}
+void tile::Invoke(){
+	
+}

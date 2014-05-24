@@ -11,6 +11,8 @@
 #include "Robot.h"
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
+#include <strstream>
+
 
 
 pivot::pivot(){
