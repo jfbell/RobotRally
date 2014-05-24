@@ -19,6 +19,12 @@ Game::Game (TileLoader* loader){
 	CardLoader cl = *new CardLoader();
 	
 	_gameDeck = new Deck(&cl);
+	
+	startTile = tileSet[0];
+	r.setStartTile(startTile);
+	r.setCurrentTile(startTile);
+	_player = &r;
+
 }
 
 Game::Game (){
