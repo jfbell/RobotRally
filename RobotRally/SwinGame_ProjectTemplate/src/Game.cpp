@@ -65,7 +65,7 @@ int Game::GameMain(){
 		cout << "2: Draw one card" << endl;
 		cout << "3: Draw multipul card" << endl;
 		cout << "4: Print your Robots status" << endl;
-		cout << "5: Print the Board" << endl;
+		cout << "5: Apply Tile Action to Robot" << endl;
 		cout << "6: Exit" << endl;
 		cout << "----------------------------------" << endl;
 		
@@ -111,12 +111,15 @@ int Game::GameMain(){
 			}
 				
 			case '5':{
-				cout << "I'll be back";
+				tile t = *p.getCurrentTile();
+				t.Invoke();
 				break;}
+				
 			case '6':{
 				cout << "Bye Bye"<< endl << endl ;
 				return 0;
 				break;}
+				
 			default:{
 				cout << "invalid input" << endl;
 				break;}
