@@ -13,7 +13,12 @@
 #include <time.h>       /* time */
 #include <math.h>
 
+#include "Pit.h"
+#include "pivot.h"
+#include "Teleport.h"
+
 #define NO_TILES 144
+
 
 TileLoader::TileLoader(){
 	std::srand(std::time(NULL));
@@ -24,10 +29,18 @@ std::vector<tile*> TileLoader::buildTiles(){
     std::vector<tile*> board;
     
     for (int i = 0 ; i < NO_TILES; i++) {
-		
 
-        board.push_back(( new tile(i) ));// = new tile;
-    
+		int x = rand()%8;
+		
+		if (x == 6){
+			board.push_back(( new Pit(i) ));// = new Pit;
+		}else if (x == 7){
+			board.push_back(( new pivot(i) ));// = new pivot;
+		}else if (x == 8){
+			board.push_back(( new Teleport(i) ));// = new teleport;
+		}else{
+			board.push_back(( new tile(i) ));// = new tile;
+		}
 	}
     return board;
 }
@@ -146,37 +159,6 @@ void TileLoader::connectTiles(std::vector<tile*> tileset, _direction dir){
         if (result == false) break;
     }
 }
-
-/*void TileLoader::connectTilesAsBoard(std::vector<tile*> tileset)
- {
- 
- int	boardSize = tileset.size();
- 
- int SquareDimentions = sqrt(boardSize);
- 
- for (int i = 0 ; i < (SquareDimentions-1); i++) {//count through 1 to 11 leaving 12 disconnected on the east
- for (int j = 0 ; j < (SquareDimentions); j++) {
- bool result = false;
- result = connect2tiles(tileset[i*12+j], tileset[i*12+j+1],East);
- 
- if (result == false) {
- std::cout << "Connection " << i*12+j << " failed while connecting East"<< std::endl;
- break;
- }
- }
- }
- for (int j = 0 ; j < (SquareDimentions-1); j++) {//count through 1 to 11 leaving 12 disconnected on the east
- for (int i = 0 ; i < (SquareDimentions-1); i++) {
- bool result = false;
- result = connect2tiles(tileset[i*12+j], tileset[i*12+j+1],South);
- 
- if (result == false) {
- std::cout << "Connection " << i*12+j << " failed while connecting South"<< std::endl;
- break;
- }
- }
- }
- }*/
 
 void TileLoader::connectTilesAsBoard(std::vector<tile*> tileset){
 		//	int x_dimension = 12;

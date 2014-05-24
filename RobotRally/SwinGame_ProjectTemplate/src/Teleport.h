@@ -16,6 +16,8 @@ class Teleport : public tile {
 	
 public:
 	Teleport();
+	Teleport(int Index);
+	
 	void Invoke();
 	_direction RandomDirection();
 	

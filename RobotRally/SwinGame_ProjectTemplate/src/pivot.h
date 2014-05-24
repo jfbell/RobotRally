@@ -16,6 +16,7 @@ class pivot : public tile {
 
 public:
 	pivot();
+	pivot(int Index);
 	void Invoke();
 };
 

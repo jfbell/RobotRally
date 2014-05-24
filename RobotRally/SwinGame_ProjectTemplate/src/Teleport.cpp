@@ -17,6 +17,13 @@
 Teleport::Teleport() {
 	std::srand(std::time(NULL));
 }
+
+
+Teleport::Teleport(int Index){
+	std::srand(std::time(NULL));
+	this->setTileID(Index);
+}
+
 void Teleport::Invoke(){
 	robot r = *this->getVisitor();
 	r.setHeading(RandomDirection());

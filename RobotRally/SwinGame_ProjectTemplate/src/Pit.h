@@ -15,6 +15,8 @@
 class Pit : public tile {
 public:
 	Pit();
+	Pit(int Index);
+	
 	bool Invoke();
 };
 

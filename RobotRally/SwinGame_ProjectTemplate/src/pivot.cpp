@@ -16,6 +16,12 @@
 pivot::pivot(){
 	std::srand(std::time(NULL));
 }
+
+pivot::pivot(int Index){
+	std::srand(std::time(NULL));
+	this->setTileID(Index);
+}
+
 void pivot::Invoke(){
 	robot r = *this->getVisitor();
 	for (int i = 0; i < (rand()%3); i++) {

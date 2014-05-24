@@ -46,7 +46,9 @@ public:
 	void use_connections_vector();
 	void do_not_use_connections_vector();
     
-	bool Invoke();
+	void setTileID(int ID);
+	
+	void Invoke();
 	
 };
 

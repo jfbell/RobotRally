@@ -12,6 +12,9 @@
 Pit::Pit(){
 	
 }
+Pit::Pit(int Index){
+	this->setTileID(Index);
+}
 
 bool Pit::Invoke(){
 	robot r = *this->getVisitor();
