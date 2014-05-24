@@ -17,6 +17,8 @@ class Teleport : public tile {
 public:
 	Teleport();
 	void Invoke();
+	_direction RandomDirection();
+	
 };
 
 #endif /* defined(__RobotRally__Teleport__) */
