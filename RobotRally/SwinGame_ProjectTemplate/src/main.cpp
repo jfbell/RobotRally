@@ -13,6 +13,8 @@
 #include "TileLoader.h"
 #include "Game.h"
 #include <string>
+#include <stdexcept>
+
 
 using namespace std;
 

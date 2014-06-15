@@ -9,6 +9,7 @@
 #include "Robot.h"
 #include <strstream>
 #include "Tile.h"
+#include <stdexcept>
 
 	/////////////////constructors
 /**
@@ -214,27 +215,33 @@ tile* robot::getCurrentTile(){
 
 bool robot::move(int steps){
     bool result = false;
-    if (steps > 0) {
-        for (int i = steps; i > 0; i--) {
-            result = moveOneSpot();
-            if (result == false) break;
-        }
-    }else{
-        rotate(Uturn);
-        for (int i = -steps; i > 0; i--) {
-            result = moveOneSpot();
-            if (result == false) break;
-        }
-        result = rotate(Uturn);
-    }
+    
+	try {
+		if (steps > 0) {
+			for (int i = steps; i > 0; i--) {
+				result = moveOneSpot();
+				if(result == false){throw std::logic_error("Can't Move");}
+			}
+		}else{
+			rotate(Uturn);
+			for (int i = -steps; i > 0; i--) {
+				result = moveOneSpot();
+				if(result == false){throw std::logic_error("Can't Move");}
+			}
+			result = rotate(Uturn);
+		}
+	} catch (std::exception &e) {
+		std::cout << "Exception : ---> " << e.what() << std::endl;
+		result = false;
+	}
+	
 	if (result == false) {
 		std::cout << "No tile infront turn befor trying to move again" << std::endl;
 	}
+	//Invoke the Tile if it has anything to do
+	currentTile->Invoke();
+	return result;
 	
-		//Invoke the Tile if it has anything to do
-	
-	
-    return result;
 }
 
 void robot::setStartTile(tile* tile){

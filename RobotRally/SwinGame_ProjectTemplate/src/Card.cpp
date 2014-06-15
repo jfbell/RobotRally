@@ -17,3 +17,5 @@ std::string Card::toString(){
 	return s.str();
 }
 
+
+
